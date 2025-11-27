@@ -1,7 +1,3 @@
-Here is **a real, complete, professional README description in English** for your portfolio project — clean, structured, and ready to copy-paste into GitHub:
-
----
-
 # 🌐 Personal Portfolio
 
 This project is my **personal developer portfolio**, created to showcase my skills, projects, and professional journey.
@@ -63,6 +59,3 @@ If you would like to collaborate or get in touch:
 * GitHub: **@yourUsername**
 
 ---
-
-If you want, I can **customize this README** exactly for your portfolio based on your technologies (React? Tailwind? Spring Boot?) and your real project list.
-
