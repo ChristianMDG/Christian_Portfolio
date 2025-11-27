@@ -13,7 +13,7 @@ function TechStack() {
           <div className="border-t w-16 md:w-32 lg:w-64 border-gray-600 flex-grow"></div>
         </div>
       <div className='container mx-auto px-4 py-4 flex justify-center items-center'>
-        <img src="/src/assets/images/grid2.png" alt="TechStack" className='' /> 
+        <img src="/public/assets/images/grid2.png" alt="TechStack" className='' /> 
        
         
       </div>
