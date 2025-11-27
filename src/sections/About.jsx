@@ -49,7 +49,7 @@ const About = () => {
             <div className="relative">
               <div className="relative w-48 h-48 sm:w-40 sm:h-40 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-[50vh] xl:h-[50vh]  overflow-hidden">
                 <img
-                  src="/public/assets/images/chris.png"
+                  src="/assets/images/chris.png"
                   alt="Christian"
                   className="w-full h-full object-cover"
                 />

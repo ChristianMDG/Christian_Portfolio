@@ -116,7 +116,7 @@ const Projects = () => {
                 rel="noreferrer"
               >
                 <p className="text-white firacode-light">Check</p>
-                <img src="/public/assets/images/arrow-up.png" alt="arrow" className="w-3 h-3" />
+                <img src="/assets/images/arrow-up.png" alt="arrow" className="w-3 h-3" />
               </a>
             </div>
 
@@ -126,7 +126,7 @@ const Projects = () => {
                 className="arrow-btn p-3 rounded-full bg-[var(--primary-color)]/10 hover:bg-[var(--primary-color)]/20 transition-colors" 
                 onClick={() => handleNavigation("previous")}
               > 
-                <img src="/public/assets/images/left-arrow.png" alt="left arrow" className="w-4 h-4" />
+                <img src="/assets/images/left-arrow.png" alt="left arrow" className="w-4 h-4" />
               </button>
 
               {/* Project Dots Indicator */}
@@ -149,7 +149,7 @@ const Projects = () => {
                 onClick={() => handleNavigation("next")}
               >
                 <img
-                  src="/public/assets/images/right-arrow.png"
+                  src="/assets/images/right-arrow.png"
                   alt="right arrow"
                   className="w-4 h-4"
                 />
@@ -210,7 +210,7 @@ const Projects = () => {
                       className={`p-2 rounded-full ${isTVOn ? 'bg-red-500 hover:bg-red-400' : 'bg-green-500 hover:bg-green-400'} transition-colors`}
                     >
                       <img 
-                        src={isTVOn ? "/public/assets/images/power-off.png" : "/public/assets/images/power-on.png"} 
+                        src={isTVOn ? "/assets/images/power-off.png" : "/assets/images/power-on.png"} 
                         alt="power" 
                         className="w-4 h-4 filter brightness-0 invert"
                       />
@@ -221,7 +221,7 @@ const Projects = () => {
                       className="p-2 rounded-full bg-[var(--primary-color)] hover:bg-[var(--primary-color)] transition-colors"
                     >
                       <img 
-                        src="/public/assets/images/external-link.png" 
+                        src="/assets/images/external-link.png" 
                         alt="external" 
                         className="w-4 h-4 filter brightness-0"
                       />
@@ -273,19 +273,19 @@ const Projects = () => {
                       onClick={() => handleNavigation("previous")}
                       className="p-2 rounded-full bg-gray-600 hover:bg-gray-500 transition-colors"
                     >
-                      <img src="/public/assets/images/left-arrow.png" alt="prev" className="w-3 h-3 filter invert" />
+                      <img src="/assets/images/left-arrow.png" alt="prev" className="w-3 h-3 filter invert" />
                     </button>
                     <button 
                       onClick={toggleTV}
                       className="p-2 rounded-full bg-red-500 hover:bg-red-400 transition-colors"
                     >
-                      <img src="/public/assets/images/power.png" alt="power" className="w-3 h-3 filter invert" />
+                      <img src="/assets/images/power.png" alt="power" className="w-3 h-3 filter invert" />
                     </button>
                     <button 
                       onClick={() => handleNavigation("next")}
                       className="p-2 rounded-full bg-gray-600 hover:bg-gray-500 transition-colors"
                     >
-                      <img src="/public/assets/images/right-arrow.png" alt="next" className="w-3 h-3 filter invert" />
+                      <img src="/assets/images/right-arrow.png" alt="next" className="w-3 h-3 filter invert" />
                     </button>
                   </div>
                 </div>

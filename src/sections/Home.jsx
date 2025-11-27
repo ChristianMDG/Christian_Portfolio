@@ -174,7 +174,7 @@ const Home = () => {
             <div className="relative">
               <div className="relative w-48 h-48 sm:w-40 sm:h-40 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-[50vh] xl:h-[50vh] border-2 border-[var(--primary-color)] rounded-full overflow-hidden">
                 <img
-                  src="/public/assets/images/christian.png"
+                  src="/assets/images/christian.png"
                   alt="Christian"
                   className="w-full h-full object-cover"
                 />

@@ -5,34 +5,34 @@ export const myProjects = [
     subdesc:
       'Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.',
     href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
-   liveDemo: '/public/assets/project/project1.mp4',
-    logo: '/public/assets/images/project-logo1.png',
+   liveDemo: '/assets/project/project1.mp4',
+    logo: '/assets/images/project-logo1.png',
     logoStyle: {
       backgroundColor: '#2A1816',
       border: '0.2px solid #36201D',
       boxShadow: '0px 0px 60px 0px #AA3C304D',
     },
-    spotlight: '/public/assets/images/spotlight1.png',
+    spotlight: '/assets/images/spotlight1.png',
     tags: [
       {
         id: 1,
         name: 'React.js',
-        path: '/public/assets/images/react.svg',
+        path: '/assets/images/react.svg',
       },
       {
         id: 2,
         name: 'TailwindCSS',
-        path: '/public/assets/images/tailwindcss.png',
+        path: '/assets/images/tailwindcss.png',
       },
       {
         id: 3,
         name: 'TypeScript',
-        path: '/public/assets/images/typescript.png',
+        path: '/assets/images/typescript.png',
       },
       {
         id: 4,
         name: 'Framer Motion',
-        path: '/public/assets/images/framer.png',
+        path: '/assets/images/framer.png',
       },
     ],
   },
@@ -42,34 +42,34 @@ export const myProjects = [
     subdesc:
       'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
     href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
-   liveDemo: '/public/assets/project/project2.mp4',
-    logo: '/public/assets/images/project-logo2.png',
+   liveDemo: '/assets/project/project2.mp4',
+    logo: '/assets/images/project-logo2.png',
     logoStyle: {
       backgroundColor: '#13202F',
       border: '0.2px solid #17293E',
       boxShadow: '0px 0px 60px 0px #2F6DB54D',
     },
-    spotlight: '/public/assets/images/spotlight2.png',
+    spotlight: '/assets/images/spotlight2.png',
     tags: [
       {
         id: 1,
         name: 'React.js',
-        path: '/public/assets/images/react.svg',
+        path: '/assets/images/react.svg',
       },
       {
         id: 2,
         name: 'TailwindCSS',
-        path: '/public/assets/images/tailwindcss.png',
+        path: '/assets/images/tailwindcss.png',
       },
       {
         id: 3,
         name: 'TypeScript',
-        path: '/public/assets/images/typescript.png',
+        path: '/assets/images/typescript.png',
       },
       {
         id: 4,
         name: 'Framer Motion',
-        path: '/public/assets/images/framer.png',
+        path: '/assets/images/framer.png',
       },
     ],
   },
@@ -79,8 +79,8 @@ export const myProjects = [
     subdesc:
       'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
     href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
-   liveDemo: '/public/assets/project/project3.mp4',
-    logo: '/public/assets/images/project-logo3.png',
+   liveDemo: '/assets/project/project3.mp4',
+    logo: '/assets/images/project-logo3.png',
     logoStyle: {
       backgroundColor: '#60f5a1',
       background:
@@ -88,27 +88,27 @@ export const myProjects = [
       border: '0.2px solid rgba(208, 213, 221, 1)',
       boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
     },
-    spotlight: '/public/assets/images/spotlight3.png',
+    spotlight: '/assets/images/spotlight3.png',
     tags: [
       {
         id: 1,
         name: 'React.js',
-        path: '/public/assets/images/react.svg',
+        path: '/assets/images/react.svg',
       },
       {
         id: 2,
         name: 'TailwindCSS',
-        path: '/public/assets/images/tailwindcss.png',
+        path: '/assets/images/tailwindcss.png',
       },
       {
         id: 3,
         name: 'TypeScript',
-        path: '/public/assets/images/typescript.png',
+        path: '/assets/images/typescript.png',
       },
       {
         id: 4,
         name: 'Framer Motion',
-        path: '/public/assets/images/framer.png',
+        path: '/assets/images/framer.png',
       },
     ],
   },
@@ -118,34 +118,34 @@ export const myProjects = [
     subdesc:
       'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
     href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
-    liveDemo: '/public/assets/project/project4.mp4',
-    logo: '/public/assets/images//project-logo4.png',
+    liveDemo: '/assets/project/project4.mp4',
+    logo: '/assets/images//project-logo4.png',
     logoStyle: {
       backgroundColor: '#0E1F38',
       border: '0.2px solid #0E2D58',
       boxShadow: '0px 0px 60px 0px #2F67B64D',
     },
-    spotlight: '/public/assets/images/spotlight4.png',
+    spotlight: '/assets/images/spotlight4.png',
     tags: [
       {
         id: 1,
         name: 'React.js',
-        path: '/public/assets/images/react.svg',
+        path: '/assets/images/react.svg',
       },
       {
         id: 2,
         name: 'TailwindCSS',
-        path: '/public/assets/images/tailwindcss.png',
+        path: '/assets/images/tailwindcss.png',
       },
       {
         id: 3,
         name: 'TypeScript',
-        path: '/public/assets/images/typescript.png',
+        path: '/assets/images/typescript.png',
       },
       {
         id: 4,
         name: 'Framer Motion',
-        path: '/public/assets/images/framer.png',
+        path: '/assets/images/framer.png',
       },
     ],
   },
@@ -155,34 +155,34 @@ export const myProjects = [
     subdesc:
       'Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
     href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
-    liveDemo: '/public/assets/project/project5.mp4',
-    logo: '/public/assets/images/project-logo5.png',
+    liveDemo: '/assets/project/project5.mp4',
+    logo: '/assets/images/project-logo5.png',
     logoStyle: {
       backgroundColor: '#1C1A43',
       border: '0.2px solid #252262',
       boxShadow: '0px 0px 60px 0px #635BFF4D',
     },
-    spotlight: '/public/assets/images/spotlight5.png',
+    spotlight: '/assets/images/spotlight5.png',
     tags: [
       {
         id: 1,
         name: 'React.js',
-        path: '/public/assets/images/react.svg',
+        path: '/assets/images/react.svg',
       },
       {
         id: 2,
         name: 'TailwindCSS',
-        path: '/public/assets/images/tailwindcss.png',
+        path: '/assets/images/tailwindcss.png',
       },
       {
         id: 3,
         name: 'TypeScript',
-        path: '/public/assets/images/typescript.png',
+        path: '/assets/images/typescript.png',
       },
       {
         id: 4,
         name: 'Framer Motion',
-        path: '/public/assets/images/framer.png',
+        path: '/assets/images/framer.png',
       },
     ],
   }
