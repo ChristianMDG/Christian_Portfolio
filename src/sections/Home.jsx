@@ -170,9 +170,9 @@ const Home = () => {
 
 
           {/* Partie Image */}
-          <div className="flex-1 flex justify-center lg:justify-center order-1 lg:order-2 w-full ">
+          <div className="flex-1 flex justify-center lg:justify-center order-1 lg:order-2 w-full lg:pt-0 sm:pt-0 pt-20 ">
             <div className="relative">
-              <div className="relative w-48 h-48 sm:w-40 sm:h-40 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-[50vh] xl:h-[50vh] border-2 border-[var(--primary-color)] rounded-full overflow-hidden">
+              <div className="relative w-48 h-48 sm:w-40 sm:h-40 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-[50vh] xl:h-[50vh] border-2 border-[var(--primary-color)] rounded-full overflow-hidden ">
                 <img
                   src="/assets/images/christian.png"
                   alt="Christian"
