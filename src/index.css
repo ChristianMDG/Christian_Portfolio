@@ -1,0 +1,270 @@
+@import "tailwindcss";
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-firacode: 'Fira Code', monospace;
+  /* --primary-color: oklch(83.476% 0.14531 211.713)oklch(82.8% 0.189 84.429); */
+  --primary-color: oklch(74.974% 0.13043 211.57);
+  --primary-color-hover:oklch(65.349% 0.11372 211.646);
+  
+  --bg-color: #000000;
+  --text-color: #1e293b;
+}
+
+
+/* === FIRA CODE - TOUTES LES VARIANTES === */
+
+/* Fira Code Light */
+@font-face {
+  font-family: 'Fira Code';
+  src: url('../assets/fonts/FiraCode-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fira Code Regular */
+@font-face {
+  font-family: 'Fira Code';
+  src: url('../assets/fonts/FiraCode-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fira Code Medium */
+@font-face {
+  font-family: 'Fira Code';
+  src: url('../assets/fonts/FiraCode-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fira Code SemiBold */
+@font-face {
+  font-family: 'Fira Code';
+  src: url('../assets/fonts/FiraCode-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fira Code Bold */
+@font-face {
+  font-family: 'Fira Code';
+  src: url('../assets/fonts/FiraCode-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* === CLASSES UTILITAIRES PAR POIDS === */
+
+/* Light - 300 */
+.firacode-light {
+  font-family: 'Fira Code', monospace;
+  font-weight: 300;
+}
+
+/* Regular - 400 */
+.firacode-regular {
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+}
+
+.firacode {
+  font-family: 'Fira Code', monospace;
+  font-weight: 400; /* Regular par défaut */
+}
+
+/* Medium - 500 */
+.firacode-medium {
+  font-family: 'Fira Code', monospace;
+  font-weight: 500;
+}
+
+/* SemiBold - 600 */
+.firacode-semibold {
+  font-family: 'Fira Code', monospace;
+  font-weight: 600;
+}
+
+/* Bold - 700 */
+.firacode-bold {
+  font-family: 'Fira Code', monospace;
+  font-weight: 700;
+}
+
+/* === CLASSES PAR USAGE === */
+
+/* Pour le code inline */
+.code-inline {
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+}
+
+/* Pour les blocs de code */
+.code-block {
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+
+/* Pour les titres de code */
+.code-title {
+  font-family: 'Fira Code', monospace;
+  font-weight: 600;
+  color: #3b82f6;
+}
+
+/* Pour les commentaires */
+.code-comment {
+  font-family: 'Fira Code', monospace;
+  font-weight: 300;
+  color: #64748b;
+  font-style: italic;
+}
+
+/* Pour les éléments importants */
+.code-important {
+  font-family: 'Fira Code', monospace;
+  font-weight: 700;
+  color: #ef4444;
+}
+
+/* === STYLES GLOBAUX === */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+}
+
+.arrow-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.75rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.2s;
+  background-image: linear-gradient(
+    to right,
+    rgba(255,255,255,0.1) 10%,
+    rgba(255,255,255,0.000025) 50%,
+    rgba(255,255,255,0.000025) 50%,
+    rgba(255,255,255,0.025) 100%
+  );
+}
+.arrow-btn:active { transform: scale(0.95); }
+
+
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(-5deg); }
+}
+
+@keyframes float-slower {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotateY(0deg) rotateX(10deg); }
+  to { transform: rotateY(360deg) rotateX(10deg); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes pulse-slower {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.4; }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 3s ease-in-out 0.5s infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.animate-float-slower {
+  animation: float-slower 5s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+.animate-pulse-slower {
+  animation: pulse-slower 6s ease-in-out infinite;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float { animation: float 3s ease-in-out infinite; }
+.animate-float-delayed { animation: float 3s ease-in-out 0.5s infinite; }
+.animate-float-slow { animation: float 4s ease-in-out infinite; }
+.animate-float-slower { animation: float 5s ease-in-out infinite; }
+
+.animate-spin-slow { animation: spin 8s linear infinite; }
+.animate-pulse-slow { animation: pulse 4s ease-in-out infinite; }
+.animate-pulse-slower { animation: pulse 6s ease-in-out infinite; }
+
+.perspective-1000 { perspective: 1000px; }
+.transform-style-preserve-3d { transform-style: preserve-3d; }
+
+/* bg-gradient-to-br from-gray-900 to-black */
+
+@keyframes float-soft {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-8px) translateX(4px); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.animate-float-soft { animation: float-soft 8s ease-in-out infinite; }
+.animate-pulse-soft { animation: pulse-soft 4s ease-in-out infinite; }
+.animate-float-slow { animation: float-soft 10s ease-in-out infinite; }
+.animate-float-slower { animation: float-soft 12s ease-in-out infinite; }
