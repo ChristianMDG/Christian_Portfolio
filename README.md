@@ -27,7 +27,7 @@ The portfolio serves as my professional online identity and helps companies or c
 * **Frontend:** HTML, CSS, JavaScript
   *(or replace with React, Tailwind, etc. based on what you used)*
 * **Design:** Responsive layout, clean UI/UX
-* **Deployment:** GitHub Pages / Vercel / Netlify
+* **Deployment:**  Vercel 
 
 ---
 
@@ -48,8 +48,7 @@ The portfolio serves as my professional online identity and helps companies or c
 
 ## 🔗 Live Demo
 
-👉 [https://your-portfolio-link.com](https://your-portfolio-link.com)
-*(Replace with your actual deployment link)*
+👉 [https://christian-portfolio-u9jz.vercel.app/](https://christian-portfolio-u9jz.vercel.app/)
 
 ---
 
@@ -57,9 +56,9 @@ The portfolio serves as my professional online identity and helps companies or c
 
 If you would like to collaborate or get in touch:
 
-* Email: **[your-email@example.com](mailto:your-email@example.com)**
+* Email: **[christianravelojaona186@gmail.com](mailto:christianravelojaona186@gmail.com)**
 * LinkedIn: **your-linkedin-profile**
-* GitHub: **@yourUsername**
+* GitHub: **@christianMDG**
 
 ---
 >>>>>>> ef7c6c86d611c13828b5bff2a9e1defe1ff44d8f
