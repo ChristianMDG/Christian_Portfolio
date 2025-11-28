@@ -18,7 +18,7 @@ const Journey = () => {
           <div className="mb-20">
             <div className="relative">
               {/* Timeline line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gray-800"></div>
+              <div className=" lg:flex md:flex hidden absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gray-800"></div>
               
               {experiences.map((exp, index) => (
                 <div 
