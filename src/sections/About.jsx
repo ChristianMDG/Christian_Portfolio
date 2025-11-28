@@ -166,7 +166,7 @@ const About = () => {
               {['UI/UX', 'Frontend', 'Backend', 'Data_Science'].map((specialty, index) => (
                 <span 
                   key={specialty}
-                  className="px-3 py-1 bg-amber-50 border border-amber-100 rounded-full text-var[(--primary-color)] font-light text-xs transform hover:scale-105 transition-all duration-300 cursor-pointer"
+                  className="px-3 py-1 bg-gray-800 text-[var(--primary-color)] text-xs rounded-full border border-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-black transition-colors duration-300 cursor-default"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {specialty}
