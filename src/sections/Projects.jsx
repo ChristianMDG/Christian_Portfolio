@@ -96,8 +96,8 @@ const Projects = () => {
                 {currentProject.title}
               </p>
 
-              <p className="text-white text-[0.9rem] code-inline">{currentProject.desc}</p>
-              <p className="text-white text-[0.9rem] code-inline">{currentProject.subdesc}</p>
+              <p className="text-white text-[0.9rem] code-comment">{currentProject.desc}</p>
+              <p className="text-white text-[0.9rem] code-comment">{currentProject.subdesc}</p>
             </div>
 
             <div className="flex items-center justify-between flex-wrap gap-5">

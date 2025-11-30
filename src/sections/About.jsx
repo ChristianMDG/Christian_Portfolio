@@ -98,7 +98,7 @@ const About = () => {
 
             {/* Animated Greeting */}
             <div className="relative">
-              <h2 className="text-white lg:text-3xl text-2xl firacode-medium mb-6 leading-relaxed tracking-wide">
+              <h2 className="text-white lg:text-3xl text-2xl code-title mb-6 leading-relaxed tracking-wide">
                 <span className="text-white bg-clip-text ">
                   {animatedText}
                 </span>
@@ -113,47 +113,30 @@ const About = () => {
             <div className="space-y-6">
               {activeTab === 'about' && (
                 <>
-                  <p className="text-gray-400 text-xs sm:text-[1rem]  firacode-medium">
+                  <p className="text-gray-400 text-xs sm:text-[1rem]  code-comment">
                     I believe in the power of thoughtful design and clean code to create digital experiences 
                     that not only function flawlessly but also delight and inspire.
                   </p>
-                  <p className="text-gray-400 text-xs sm:text-[1rem]  firacode-medium">
+                  <p className="text-gray-400 text-xs sm:text-[1rem]  code-comment">
                     With a background in both design and development, I bridge the gap between beautiful 
                     interfaces and robust technical solutions.
                   </p>
-                  <p className="text-gray-400 text-xs sm:text-[1rem]  firacode-medium">
+                  <p className="text-gray-400 text-xs sm:text-[1rem]  code-comment">
                     Every project is an opportunity to learn, grow, and push the boundaries of what's possible 
                     in the digital space.
                   </p>
                 </>
               )}
 
-              {activeTab === 'skills' && (
-                <div className="space-y-4">
-                  <div className="flex flex-wrap gap-3">
-                    {['React', 'TypeScript', 'Node.js', 'Next.js', 'Tailwind', 'Figma', 'Python', 'AWS'].map((skill) => (
-                      <span 
-                        key={skill}
-                        className="px-4 py-2 bg-white border border-slate-200 rounded-full text-slate-700 font-light text-sm hover:border-[var(--primary-color)] hover:text-amber-600 transform hover:scale-105 transition-all duration-300 cursor-pointer shadow-sm"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                  <p className="text-slate-600 text-lg leading-relaxed font-light mt-4">
-                    Continuously learning and adapting to new technologies while maintaining a strong foundation 
-                    in modern web development practices.
-                  </p>
-                </div>
-              )}
+              
 
               {activeTab === 'vision' && (
                 <div className="space-y-4">
-                  <p className="text-gray-400 text-xs sm:text-[1rem]  firacode-medium">
+                  <p className="text-gray-400 text-xs sm:text-[1rem]  code-comment">
                     I envision a digital world where technology enhances human connection rather than replaces it, 
                     where interfaces are intuitive, and experiences are meaningful.
                   </p>
-                  <p className="text-gray-400 text-xs sm:text-[1rem]  firacode-medium">
+                  <p className="text-gray-400 text-xs sm:text-[1rem]  code-comment">
                     My mission is to create software that not only solves problems but also brings joy and 
                     efficiency to people's lives.
                   </p>

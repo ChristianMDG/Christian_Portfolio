@@ -120,14 +120,14 @@
 .code-title {
   font-family: 'Fira Code', monospace;
   font-weight: 600;
-  color: #3b82f6;
+  
 }
 
 /* Pour les commentaires */
 .code-comment {
   font-family: 'Fira Code', monospace;
   font-weight: 300;
-  color: #64748b;
+  /*color: #64748b;*/
   font-style: italic;
 }
 
@@ -135,7 +135,7 @@
 .code-important {
   font-family: 'Fira Code', monospace;
   font-weight: 700;
-  color: #ef4444;
+ 
 }
 
 /* === STYLES GLOBAUX === */

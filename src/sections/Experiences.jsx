@@ -1,5 +1,5 @@
 import { experiences, education } from '../constant/experience';
-const Journey = () => {
+const Experiences = () => {
   return (
     <div className="w-full min-h-screen py-12 bg-black">
       <div className="container mx-auto px-4">
@@ -7,7 +7,7 @@ const Journey = () => {
         <div className="flex pt-10 justify-center items-center mb-16">
           <div className="border-t w-16 md:w-32 lg:w-64 border-gray-600 flex-grow"></div>
           <h1 className="firacode-semibold sm:text-2xl md:text-3xl lg:text-4xl text-[var(--primary-color)]">
-            <span className="text-gray-600">|</span> Professional Experience<span className="text-gray-600">|</span>
+            <span className="text-gray-600">|</span>Experiences<span className="text-gray-600">|</span>
           </h1>
           <div className="border-t w-16 md:w-32 lg:w-64 border-gray-600 flex-grow"></div>
         </div>
@@ -97,17 +97,10 @@ const Journey = () => {
               ))}
             </div>
           </div>
-
-          {/* Call to Action */}
-          {/* <div className="text-center mt-16">
-            <button className="bg-[var(--primary-color)] text-black px-8 py-3 rounded-lg font-semibold hover:bg-[var(--primary-color-hover)] transform hover:-translate-y-1 transition-all duration-300 firacode-semibold">
-              Download My CV
-            </button>
-          </div> */}
         </div>
       </div>
     </div>
   );
 };
 
-export default Journey;
+export default Experiences

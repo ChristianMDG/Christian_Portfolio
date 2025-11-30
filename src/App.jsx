@@ -5,7 +5,7 @@ import About from './sections/About'
 import Contact from './sections/Contact'
 import Projects from './sections/Projects'
 import TechStack from './sections/TechStack'
-import Parcours from './sections/Parcours'
+import Experiences from './sections/Experiences'
 function App() {
   return (
     <Layout>
@@ -18,8 +18,8 @@ function App() {
        <section id="projects">
         <Projects />
       </section>
-      <section id="parcours">
-        <Parcours />
+      <section id="experiences">
+        <Experiences />
       </section>
       <section id="TechStack">
         <TechStack />
