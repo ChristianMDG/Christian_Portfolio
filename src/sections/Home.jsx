@@ -124,16 +124,31 @@ const Home = () => {
             </p>
 
             <div className="flex justify-center lg:justify-start mb-8 sm:mb-10">
-              <button
-                onClick={() =>
-                  document
-                    .getElementById("contact")
-                    .scrollIntoView({ behavior: "smooth" })
-                }
-                className="bg-[var(--primary-color)] hover:bg-[var(--primary-color-hover)] text-black font-medium py-2 px-6 sm:py-3 sm:px-8 rounded-lg transition-colors duration-200 text-sm sm:text-base"
-              >
-                Contact me !!
-              </button>
+             <button
+  onClick={() =>
+    document
+      .getElementById("contact")
+      .scrollIntoView({ behavior: "smooth" })
+  }
+  className="group relative bg-black border border-gray-700 hover:border-[var(--primary-color)] text-white hover:text-[var(--primary-color)] font-medium py-2 px-6 sm:py-3 sm:px-8 rounded-lg transition-all duration-300 text-sm sm:text-base flex items-center gap-2 shadow-lg hover:shadow-xl hover:shadow-[var(--primary-color)]/10"
+>
+  <span className="flex items-center gap-2">
+    Contact me
+    <svg 
+      className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-125" 
+      fill="none" 
+      stroke="currentColor" 
+      viewBox="0 0 24 24"
+    >
+      <path 
+        strokeLinecap="round" 
+        strokeLinejoin="round" 
+        strokeWidth={2} 
+        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" 
+      />
+    </svg>
+  </span>
+</button>
             </div>
 
             <div className="mb-6 sm:mb-8 text-center lg:text-left">
