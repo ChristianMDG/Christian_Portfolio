@@ -52,7 +52,7 @@ const CVPage = () => {
           
           // Téléchargement réel
           const link = document.createElement('a');
-          link.href = '/CV.pdf';
+          link.href = './CV.pdf';
           link.download = 'Christian_Ravelojaona_CV.pdf';
           document.body.appendChild(link);
           link.click();
