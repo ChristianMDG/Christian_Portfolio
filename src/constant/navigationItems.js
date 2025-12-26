@@ -3,6 +3,6 @@ export const navigationItems = [
   { sectionId: "about", label: "About" },
   { sectionId: "projects", label: "Projects" },
   { sectionId: "experiences", label: "Experiences" },
-  { sectionId: "TechStack", label: "TechStack" },
+  { sectionId: "techstack", label: "TechStack" },
   { sectionId: "contact", label: "Contact" }
 ];
