@@ -6,7 +6,10 @@ const CVPage = () => {
   const [downloadProgress, setDownloadProgress] = useState(0);
   const [showPreview, setShowPreview] = useState(true);
   const [zoomLevel, setZoomLevel] = useState(1);
+  const [pdfLoaded, setPdfLoaded] = useState(false);
+  const [pdfError, setPdfError] = useState(false);
   const pdfContainerRef = useRef(null);
+  const iframeRef = useRef(null);
 
   useEffect(() => {
     // Animation d'entrée améliorée
@@ -24,10 +27,10 @@ const CVPage = () => {
       }, index * 120);
     });
 
-    // Simulation du chargement PDF
-    const timer = setTimeout(() => {
+    // Timeout de sécurité pour le chargement
+    const loadingTimer = setTimeout(() => {
       setIsLoading(false);
-    }, 800);
+    }, 3000); // Augmentez le timeout à 3 secondes
 
     // Navigation au clavier
     const handleKeyPress = (e) => {
@@ -37,11 +40,44 @@ const CVPage = () => {
     };
 
     window.addEventListener('keydown', handleKeyPress);
+    
     return () => {
-      clearTimeout(timer);
+      clearTimeout(loadingTimer);
       window.removeEventListener('keydown', handleKeyPress);
     };
   }, []);
+
+  // Handler pour le chargement du PDF
+  const handlePdfLoad = () => {
+    console.log('PDF loaded successfully');
+    setIsLoading(false);
+    setPdfLoaded(true);
+  };
+
+  const handlePdfError = () => {
+    console.error('PDF failed to load');
+    setIsLoading(false);
+    setPdfError(true);
+  };
+
+  // Chemin dynamique pour le PDF
+  const getPdfPath = () => {
+    // Essayer plusieurs chemins possibles
+    const basePath = window.location.origin;
+    
+    // Essayer différents chemins
+    const possiblePaths = [
+      '/CV.pdf',
+      '/cv.pdf',
+      'CV.pdf',
+      '/public/CV.pdf',
+      './CV.pdf',
+      `${basePath}/CV.pdf`
+    ];
+    
+    // Retourner le premier chemin qui fonctionne (utilisé par le bouton download)
+    return '/CV.pdf'; // Chemin par défaut
+  };
 
   const handleDownload = () => {
     setDownloadProgress(0);
@@ -52,8 +88,9 @@ const CVPage = () => {
           
           // Téléchargement réel
           const link = document.createElement('a');
-          link.href = '../../public/CV.pdf';
+          link.href = getPdfPath();
           link.download = 'Christian_Ravelojaona_CV.pdf';
+          link.target = '_blank'; // Ouvrir dans un nouvel onglet au cas où
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
@@ -63,9 +100,8 @@ const CVPage = () => {
           notification.className = 'download-notification';
           notification.innerHTML = `
             <div class="fixed top-4 right-4 bg-green-600 text-white px-6 py-3 rounded-lg shadow-xl z-50 flex items-center gap-3 animate-slideIn">
-              <svg class="w-6 h-6 animate-spin" fill="none" viewBox="0 0 24 24">
-                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
               </svg>
               CV téléchargé avec succès !
             </div>
@@ -148,6 +184,22 @@ const CVPage = () => {
           animation: none !important;
           transition: none !important;
         }
+        
+        /* Style pour l'erreur PDF */
+        .pdf-error {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          padding: 2rem;
+          text-align: center;
+        }
+        
+        .pdf-error-icon {
+          font-size: 4rem;
+          margin-bottom: 1rem;
+        }
       `}</style>
 
       <div className="container mx-auto px-4 max-w-7xl">
@@ -185,7 +237,7 @@ const CVPage = () => {
         {/* Header Principal */}
         <header className="text-center mb-12 pt-16 cv-element">
           <div className="inline-block relative">
-            <h1 className="text-2xl md:text-7xl font-bold text-white mb-4 tracking-tight">
+            <h1 className="text-4xl md:text-7xl font-bold text-white mb-4 tracking-tight">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-300 via-[var(--primary-color)] to-gray-300">
                 Curriculum Vitae
               </span>
@@ -200,8 +252,6 @@ const CVPage = () => {
               Christian Ravelojaona
             </span>
           </p>
-          
-        
         </header>
 
         {/* Contenu Principal */}
@@ -362,7 +412,9 @@ const CVPage = () => {
                     
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-[var(--primary-color)] rounded-full animate-ping"></div>
-                      <span className="text-gray-400 text-sm">Online</span>
+                      <span className="text-gray-400 text-sm">
+                        {pdfError ? 'Error Loading' : pdfLoaded ? 'Loaded' : 'Loading...'}
+                      </span>
                     </div>
                   </div>
 
@@ -373,16 +425,40 @@ const CVPage = () => {
                         <div className="text-center">
                           <div className="w-16 h-16 border-4 border-[var(--primary-color)] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
                           <p className="text-gray-400">Loading CV preview...</p>
+                          <p className="text-gray-600 text-sm mt-2">Please wait while the document loads</p>
+                        </div>
+                      </div>
+                    ) : pdfError ? (
+                      <div className="h-[700px] flex items-center justify-center pdf-error">
+                        <div className="text-red-400 pdf-error-icon">📄❌</div>
+                        <h3 className="text-white text-xl mb-2">Unable to load PDF</h3>
+                        <p className="text-gray-400 mb-4">There was an error loading the CV preview.</p>
+                        <div className="flex gap-4">
+                          <button
+                            onClick={() => window.open('/CV.pdf', '_blank')}
+                            className="px-4 py-2 bg-[var(--primary-color)] text-white rounded-lg hover:bg-[var(--primary-color)]/80 transition-colors"
+                          >
+                            Open Direct Link
+                          </button>
+                          <button
+                            onClick={handleDownload}
+                            className="px-4 py-2 border border-gray-600 text-gray-300 rounded-lg hover:border-[var(--primary-color)] hover:text-[var(--primary-color)] transition-colors"
+                          >
+                            Download Instead
+                          </button>
                         </div>
                       </div>
                     ) : (
                       <>
                         <div className="pdf-viewer">
                           <iframe
+                            ref={iframeRef}
                             src="/CV.pdf#view=fitH"
                             className="w-full h-[700px]"
                             title="CV Preview"
                             loading="lazy"
+                            onLoad={handlePdfLoad}
+                            onError={handlePdfError}
                           />
                         </div>
                         
