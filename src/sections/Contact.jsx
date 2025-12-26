@@ -58,7 +58,7 @@ const Contact = () => {
         (error) => {
           console.log("Failed to send email:", error.text);
           setIsLoading(false);
-          alert("Failed to send message. Please try again.");
+        
         }
       );
   };

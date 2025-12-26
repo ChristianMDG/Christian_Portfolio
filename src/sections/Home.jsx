@@ -8,7 +8,7 @@ const Home = () => {
   const [authorDisplayed, setAuthorDisplayed] = useState("");
 
   
-  const fullText = "Christian is a Data Scientist and Full-Stack Developer";
+  const fullText = "Christian is a Full-Stack Developer";
   const sloganText = "Transforming Data into Intelligence, Code into Innovation.";
   const currentlyWorkingText = "Portfolio";
   const quoteText = "The best way to predict the future is to code it.";
