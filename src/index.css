@@ -468,15 +468,6 @@ section.section-visible {
   transform: translateY(20px);
 }
 
-/* Animation pour l'iframe PDF */
-iframe {
-  filter: invert(90%) hue-rotate(180deg);
-  transition: filter 0.3s ease;
-}
-
-iframe:hover {
-  filter: none;
-}
 
 /* Scrollbar pour la page PDF */
 ::-webkit-scrollbar {
