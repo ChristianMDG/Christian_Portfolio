@@ -103,7 +103,7 @@ const Home = () => {
 
   return (
     <div
-      className="w-full min-h-screen flex items-center justify-center text-white"
+      className="w-full min-h-screen flex items-center justify-center text-white z-50"
     >
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 ">

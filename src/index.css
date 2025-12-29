@@ -498,11 +498,7 @@ section.section-visible {
     color: black !important;
   }
 }
-
-
-
-
-.floating-dots-fullscreen {
+.floating-dots-spread {
   position: fixed;
   top: 0;
   left: 0;
@@ -514,134 +510,137 @@ section.section-visible {
   background: #000000;
 }
 
-/* Styles des cercles flottants */
 .floating-dot {
   position: absolute;
   border-radius: 50%;
   background: radial-gradient(
     circle at center,
-    oklch(74.974% 0.13043 211.57),
-    oklch(65.349% 0.11372 211.646)
+    oklch(100% 0.00011 271.152),
+    oklch(100% 0.00011 271.152)
   );
   animation: float-dot ease-in-out infinite;
-  filter: drop-shadow(0 0 8px oklch(74.974% 0.13043 211.57 / 0.8));
+  filter: 
+    drop-shadow(0 0 10px oklch(74.974% 0.13043 211.57 / 0.8))
+    drop-shadow(0 0 20px oklch(74.974% 0.13043 211.57 / 0.8));
   will-change: transform, opacity;
+  max-width: 12px;
+  max-height: 12px;
 }
 
-/* 25 cercles éparpillés sur tout l'écran */
+/* 35 cercles éparpillés sur tout l'écran */
 .floating-dot:nth-child(1) {
-  width: 14px;
-  height: 14px;
-  top: 8%;
-  left: 5%;
+  width: 8px;
+  height: 8px;
+  top: 10%;
+  left: 8%;
   animation-duration: 15s;
   animation-delay: 0s;
 }
 
 .floating-dot:nth-child(2) {
-  width: 22px;
-  height: 22px;
+  width: 10px;
+  height: 10px;
   top: 15%;
-  left: 90%;
+  left: 85%;
   animation-duration: 18s;
   animation-delay: 1.2s;
 }
 
 .floating-dot:nth-child(3) {
-  width: 10px;
-  height: 10px;
-  top: 35%;
-  left: 12%;
+  width: 7px;
+  height: 7px;
+  top: 25%;
+  left: 15%;
   animation-duration: 12s;
   animation-delay: 0.5s;
 }
 
 .floating-dot:nth-child(4) {
-  width: 18px;
-  height: 18px;
-  top: 25%;
+  width: 9px;
+  height: 9px;
+  top: 20%;
   left: 75%;
   animation-duration: 20s;
   animation-delay: 2.5s;
 }
 
 .floating-dot:nth-child(5) {
-  width: 8px;
-  height: 8px;
-  top: 60%;
-  left: 8%;
+  width: 6px;
+  height: 6px;
+  top: 40%;
+  left: 10%;
   animation-duration: 14s;
   animation-delay: 3s;
 }
 
 .floating-dot:nth-child(6) {
-  width: 24px;
-  height: 24px;
-  top: 45%;
-  left: 92%;
+  width: 11px;
+  height: 11px;
+  top: 35%;
+  left: 90%;
   animation-duration: 22s;
   animation-delay: 1.5s;
 }
 
 .floating-dot:nth-child(7) {
-  width: 12px;
-  height: 12px;
-  top: 72%;
-  left: 20%;
+  width: 8px;
+  height: 8px;
+  top: 55%;
+  left: 22%;
   animation-duration: 16s;
   animation-delay: 0.8s;
 }
 
 .floating-dot:nth-child(8) {
-  width: 16px;
-  height: 16px;
-  top: 30%;
-  left: 55%;
+  width: 9px;
+  height: 9px;
+  top: 45%;
+  left: 65%;
   animation-duration: 19s;
   animation-delay: 2s;
 }
 
 .floating-dot:nth-child(9) {
-  width: 9px;
-  height: 9px;
-  top: 88%;
-  left: 65%;
-  animation-duration: 13s;
+  width: 7px;
+  height: 7px;
+  top: 70%;
+  left: 5%;
+  animation-duration: 11s;
   animation-delay: 3.5s;
 }
 
 .floating-dot:nth-child(10) {
-  width: 20px;
-  height: 20px;
-  top: 5%;
-  left: 45%;
+  width: 10px;
+  height: 10px;
+  top: 75%;
+  left: 95%;
   animation-duration: 17s;
   animation-delay: 1s;
 }
 
 .floating-dot:nth-child(11) {
-  width: 13px;
-  height: 13px;
-  top: 78%;
-  left: 88%;
+  width: 8px;
+  height: 8px;
+  top: 60%;
+  left: 80%;
   animation-duration: 21s;
   animation-delay: 0.3s;
 }
 
 .floating-dot:nth-child(12) {
-  width: 11px;
-  height: 11px;
-  top: 92%;
-  left: 25%;
+  width: 6px;
+  height: 6px;
+  top: 85%;
+  left: 30%;
   animation-duration: 14s;
   animation-delay: 2.2s;
 }
 
 .floating-dot:nth-child(13) {
-  width: 19px;
-  height: 19px;
-  top: 55%;
-  left: 35%;
+  width: 9px;
+  height: 9px;
+  top: 50%;
+  left: 50%;
   animation-duration: 23s;
   animation-delay: 1.8s;
 }
@@ -649,137 +648,228 @@ section.section-visible {
 .floating-dot:nth-child(14) {
   width: 7px;
   height: 7px;
-  top: 18%;
-  left: 60%;
+  top: 30%;
+  left: 40%;
   animation-duration: 11s;
   animation-delay: 3.8s;
 }
 
 .floating-dot:nth-child(15) {
-  width: 15px;
-  height: 15px;
-  top: 68%;
-  left: 48%;
+  width: 10px;
+  height: 10px;
+  top: 65%;
+  left: 55%;
   animation-duration: 25s;
   animation-delay: 0.7s;
 }
 
 .floating-dot:nth-child(16) {
-  width: 26px;
-  height: 26px;
-  top: 40%;
-  left: 78%;
-  animation-duration: 27s;
+  width: 8px;
+  height: 8px;
+  top: 90%;
+  left: 70%;
+  animation-duration: 22s;
   animation-delay: 2.8s;
 }
 
 .floating-dot:nth-child(17) {
-  width: 10px;
-  height: 10px;
-  top: 85%;
-  left: 12%;
+  width: 6px;
+  height: 6px;
+  top: 5%;
+  left: 50%;
   animation-duration: 13s;
   animation-delay: 4s;
 }
 
 .floating-dot:nth-child(18) {
-  width: 17px;
-  height: 17px;
+  width: 9px;
+  height: 9px;
   top: 95%;
-  left: 55%;
+  left: 45%;
   animation-duration: 16s;
   animation-delay: 1.5s;
 }
 
 .floating-dot:nth-child(19) {
-  width: 21px;
-  height: 21px;
-  top: 52%;
-  left: 95%;
+  width: 7px;
+  height: 7px;
+  top: 80%;
+  left: 85%;
   animation-duration: 19s;
   animation-delay: 0.9s;
 }
 
 .floating-dot:nth-child(20) {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   top: 12%;
-  left: 30%;
+  left: 60%;
   animation-duration: 24s;
   animation-delay: 3.2s;
 }
 
 .floating-dot:nth-child(21) {
-  width: 25px;
-  height: 25px;
-  top: 75%;
-  left: 40%;
-  animation-duration: 28s;
-  animation-delay: 2.1s;
+  width: 8px;
+  height: 8px;
+  top: 28%;
+  left: 28%;
+  animation-duration: 17s;
+  animation-delay: 0.6s;
 }
 
 .floating-dot:nth-child(22) {
-  width: 14px;
-  height: 14px;
-  top: 22%;
-  left: 82%;
-  animation-duration: 15s;
-  animation-delay: 0.4s;
+  width: 7px;
+  height: 7px;
+  top: 72%;
+  left: 72%;
+  animation-duration: 19s;
+  animation-delay: 1.3s;
 }
 
 .floating-dot:nth-child(23) {
   width: 9px;
   height: 9px;
-  top: 48%;
-  left: 22%;
-  animation-duration: 10s;
-  animation-delay: 4.5s;
+  top: 88%;
+  left: 12%;
+  animation-duration: 13s;
+  animation-delay: 2.7s;
 }
 
 .floating-dot:nth-child(24) {
-  width: 23px;
-  height: 23px;
-  top: 65%;
-  left: 72%;
-  animation-duration: 26s;
-  animation-delay: 1.3s;
+  width: 6px;
+  height: 6px;
+  top: 42%;
+  left: 88%;
+  animation-duration: 15s;
+  animation-delay: 1.9s;
 }
 
 .floating-dot:nth-child(25) {
-  width: 28px;
-  height: 28px;
-  top: 82%;
-  left: 85%;
-  animation-duration: 30s;
-  animation-delay: 0.6s;
+  width: 10px;
+  height: 10px;
+  top: 58%;
+  left: 18%;
+  animation-duration: 23s;
+  animation-delay: 0.8s;
 }
 
-/* Animation améliorée avec plus de variations */
+/* Cercles supplémentaires pour couvrir tout l'écran */
+.floating-dot:nth-child(26) {
+  width: 8px;
+  height: 8px;
+  top: 3%;
+  left: 25%;
+  animation-duration: 18s;
+  animation-delay: 0.4s;
+}
+
+.floating-dot:nth-child(27) {
+  width: 7px;
+  height: 7px;
+  top: 97%;
+  left: 75%;
+  animation-duration: 20s;
+  animation-delay: 1.1s;
+}
+
+.floating-dot:nth-child(28) {
+  width: 9px;
+  height: 9px;
+  top: 35%;
+  left: 5%;
+  animation-duration: 14s;
+  animation-delay: 2.3s;
+}
+
+.floating-dot:nth-child(29) {
+  width: 6px;
+  height: 6px;
+  top: 65%;
+  left: 95%;
+  animation-duration: 16s;
+  animation-delay: 0.2s;
+}
+
+.floating-dot:nth-child(30) {
+  width: 10px;
+  height: 10px;
+  top: 82%;
+  left: 38%;
+  animation-duration: 26s;
+  animation-delay: 3.5s;
+}
+
+.floating-dot:nth-child(31) {
+  width: 8px;
+  height: 8px;
+  top: 18%;
+  left: 92%;
+  animation-duration: 19s;
+  animation-delay: 1.7s;
+}
+
+.floating-dot:nth-child(32) {
+  width: 7px;
+  height: 7px;
+  top: 92%;
+  left: 8%;
+  animation-duration: 21s;
+  animation-delay: 0.5s;
+}
+
+.floating-dot:nth-child(33) {
+  width: 9px;
+  height: 9px;
+  top: 48%;
+  left: 35%;
+  animation-duration: 17s;
+  animation-delay: 2.9s;
+}
+
+.floating-dot:nth-child(34) {
+  width: 6px;
+  height: 6px;
+  top: 52%;
+  left: 65%;
+  animation-duration: 13s;
+  animation-delay: 1.4s;
+}
+
+.floating-dot:nth-child(35) {
+  width: 10px;
+  height: 10px;
+  top: 78%;
+  left: 52%;
+  animation-duration: 28s;
+  animation-delay: 0.9s;
+}
+
+/* Animation pour cercles éparpillés */
 @keyframes float-dot {
   0%, 100% {
     transform: translate(0, 0) scale(1) rotate(0deg);
     opacity: 0.4;
   }
   20% {
-    transform: translate(30px, -20px) scale(1.15) rotate(90deg);
+    transform: translate(25px, -18px) scale(1.12) rotate(90deg);
     opacity: 0.9;
   }
   40% {
-    transform: translate(-25px, 25px) scale(0.9) rotate(180deg);
+    transform: translate(-20px, 22px) scale(0.92) rotate(180deg);
     opacity: 0.3;
   }
   60% {
-    transform: translate(-35px, -15px) scale(1.1) rotate(270deg);
+    transform: translate(-28px, -12px) scale(1.08) rotate(270deg);
     opacity: 0.7;
   }
   80% {
-    transform: translate(20px, 30px) scale(0.95) rotate(360deg);
+    transform: translate(18px, 25px) scale(0.96) rotate(360deg);
     opacity: 0.5;
   }
 }
 
-/* Effets de fond subtils */
-.floating-dots-fullscreen::before {
+/* Fond plus diffus pour couvrir tout l'écran */
+.floating-dots-spread::before {
   content: '';
   position: absolute;
   top: 0;
@@ -788,19 +878,24 @@ section.section-visible {
   height: 100%;
   background: 
     radial-gradient(
-      circle at 15% 25%,
-      oklch(74.974% 0.13043 211.57 / 0.02) 0%,
-      transparent 40%
+      circle at 20% 30%,
+      oklch(74.974% 0.13043 211.57 / 0.03) 0%,
+      transparent 50%
     ),
     radial-gradient(
-      circle at 85% 75%,
-      oklch(65.349% 0.11372 211.646 / 0.01) 0%,
-      transparent 40%
+      circle at 80% 70%,
+      oklch(65.349% 0.11372 211.646 / 0.02) 0%,
+      transparent 50%
     ),
     radial-gradient(
-      circle at 50% 50%,
-      oklch(74.974% 0.13043 211.57 / 0.015) 0%,
-      transparent 60%
+      circle at 40% 80%,
+      oklch(74.974% 0.13043 211.57 / 0.025) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 60% 20%,
+      oklch(65.349% 0.11372 211.646 / 0.015) 0%,
+      transparent 50%
     );
   animation: subtle-pulse 20s ease-in-out infinite;
 }
@@ -814,98 +909,123 @@ section.section-visible {
   }
 }
 
-/* Effets de connexion aléatoires */
-.connection-trail {
-  position: absolute;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    oklch(74.974% 0.13043 211.57 / 0.2),
-    transparent
-  );
-  animation: trail-flow 8s linear infinite;
-  pointer-events: none;
-  filter: blur(1px);
-}
-
-/* Quelques trails de connexion */
-.floating-dots-fullscreen::after {
+/* Connexions traversant l'écran */
+.floating-dots-spread::after {
   content: '';
   position: absolute;
-  top: 20%;
-  left: 10%;
-  width: 40%;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    oklch(74.974% 0.13043 211.57 / 0.15),
-    oklch(65.349% 0.11372 211.646 / 0.25),
-    oklch(74.974% 0.13043 211.57 / 0.15),
-    transparent
-  );
-  animation: scan-trail 12s linear infinite;
-  transform: rotate(30deg);
-  filter: blur(0.5px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(
+      45deg,
+      transparent 48%,
+      oklch(74.974% 0.13043 211.57 / 0.05) 50%,
+      transparent 52%
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 48%,
+      oklch(65.349% 0.11372 211.646 / 0.03) 50%,
+      transparent 52%
+    );
+  animation: grid-scan 15s linear infinite;
+  pointer-events: none;
 }
 
-@keyframes trail-flow {
+@keyframes grid-scan {
   0% {
     opacity: 0;
-    transform: scaleX(0);
-  }
-  50% {
-    opacity: 0.4;
-    transform: scaleX(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scaleX(0);
-  }
-}
-
-@keyframes scan-trail {
-  0% {
-    opacity: 0;
-    transform: rotate(30deg) translateX(-100%);
+    transform: translateX(-100%) translateY(-100%);
   }
   10%, 90% {
-    opacity: 0.2;
+    opacity: 0.1;
   }
   100% {
     opacity: 0;
-    transform: rotate(30deg) translateX(100%);
+    transform: translateX(100%) translateY(100%);
   }
 }
 
-/* Responsive pour mobile */
+/* Effets de particules volantes supplémentaires */
+.particle-trail {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: oklch(74.974% 0.13043 211.57);
+  border-radius: 50%;
+  animation: particle-fly linear infinite;
+  filter: drop-shadow(0 0 4px oklch(74.974% 0.13043 211.57));
+}
+
+/* Quelques particules volantes */
+.floating-dots-spread .particle-trail:nth-child(36) {
+  animation-duration: 8s;
+  animation-delay: 0s;
+  top: 0;
+  left: 20%;
+}
+
+.floating-dots-spread .particle-trail:nth-child(37) {
+  animation-duration: 10s;
+  animation-delay: 2s;
+  top: 100%;
+  left: 60%;
+}
+
+.floating-dots-spread .particle-trail:nth-child(38) {
+  animation-duration: 12s;
+  animation-delay: 4s;
+  top: 30%;
+  left: 0;
+}
+
+@keyframes particle-fly {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(100vw, 100vh);
+    opacity: 0;
+  }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .floating-dot {
-    filter: drop-shadow(0 0 4px oklch(74.974% 0.13043 211.57 / 0.6));
+    max-width: 10px;
+    max-height: 10px;
+    filter: drop-shadow(0 0 6px oklch(74.974% 0.13043 211.57 / 0.6));
   }
   
-  /* Réduire légèrement les tailles sur mobile */
+  /* Sur mobile, garder les positions mais réduire légèrement les distances */
   .floating-dot {
-    width: calc(var(--original-width) * 0.8);
-    height: calc(var(--original-height) * 0.8);
+    animation-duration: calc(var(--original-duration) * 0.8);
   }
 }
 
 /* Accessibilité */
 @media (prefers-reduced-motion: reduce) {
   .floating-dot,
-  .floating-dots-fullscreen::before,
-  .floating-dots-fullscreen::after {
+  .floating-dots-spread::before,
+  .floating-dots-spread::after,
+  .particle-trail {
     animation: none !important;
   }
   
   .floating-dot {
     opacity: 0.15;
   }
-}
-
-/* Optimisation des performances */
-.floating-dots-fullscreen {
-  contain: layout paint style;
+  
+  .particle-trail {
+    display: none;
+  }
 }
