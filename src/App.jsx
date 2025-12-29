@@ -52,19 +52,49 @@ const Portfolio = () => {
         </div>
         <Home />
       </section>
-      <section id="about">
+      <section id="about" style={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}
+      >
+        <div className="floating-dots-fullscreen">
+          {Array.from({ length: 25 }).map((_, i) => (
+            <div key={i} className="floating-dot"></div>
+          ))}
+        </div>
         <About />
       </section>
-      <section id="projects">
+      <section id="projects" style={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}
+      >
+        <div className="floating-dots-fullscreen">
+          {Array.from({ length: 25 }).map((_, i) => (
+            <div key={i} className="floating-dot"></div>
+          ))}
+        </div>
         <Projects />
       </section>
-      <section id="experiences">
+      <section id="experiences" style={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}
+      >
+        <div className="floating-dots-fullscreen">
+          {Array.from({ length: 25 }).map((_, i) => (
+            <div key={i} className="floating-dot"></div>
+          ))}
+        </div>
         <Experiences />
       </section>
-      <section id="techstack">
+      <section id="techstack" style={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}
+      >
+        <div className="floating-dots-fullscreen">
+          {Array.from({ length: 25 }).map((_, i) => (
+            <div key={i} className="floating-dot"></div>
+          ))}
+        </div>
         <TechStack />
       </section>
-      <section id="contact">
+      <section id="contact" style={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}
+      >
+        <div className="floating-dots-fullscreen">
+          {Array.from({ length: 25 }).map((_, i) => (
+            <div key={i} className="floating-dot"></div>
+          ))}
+        </div>
         <Contact />
       </section>
     </Layout>
