@@ -1,6 +1,6 @@
 
 # Christian_RAVELOJAONA
-=======
+
 # 🌐 Personal Portfolio
 
 This project is my **personal developer portfolio**, created to showcase my skills, projects, and professional journey.
