@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Christian_RAVELOJAONA
 =======
 # 🌐 Personal Portfolio
@@ -6,7 +6,6 @@
 This project is my **personal developer portfolio**, created to showcase my skills, projects, and professional journey.
 The goal is to provide a clean, modern, and responsive interface where visitors can quickly understand who I am and what I can do.
 
----
 
 ## 🚀 About the Project
 
@@ -57,8 +56,6 @@ The portfolio serves as my professional online identity and helps companies or c
 If you would like to collaborate or get in touch:
 
 * Email: **[christianravelojaona186@gmail.com](mailto:christianravelojaona186@gmail.com)**
-* LinkedIn: **your-linkedin-profile**
+* LinkedIn: **www.linkedin.com/in/christian-ravelojaona-a934b0305**
 * GitHub: **@christianMDG**
 
----
->>>>>>> ef7c6c86d611c13828b5bff2a9e1defe1ff44d8f
