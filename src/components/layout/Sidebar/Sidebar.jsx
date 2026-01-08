@@ -14,7 +14,7 @@ export default function Sidebar() {
           <FaGithub className="text-gray-400 hover:text-white text-2xl transition-colors duration-300" />
         </a>
         <a
-          href="https://www.linkedin.com/in/ton-profil"
+          href="https://www.linkedin.com/in/christian-ravelojaona-a934b0305/"
           target="_blank"
           rel="noreferrer"
         >
