@@ -41,7 +41,7 @@ The portfolio serves as my professional online identity and helps companies or c
 
 ## 📸 Preview
 
-*(You can insert screenshots or a GIF here)*
+![Christian Portfolio Preview](./public/assets/images/portfolio.png)
 
 ---
 
