@@ -23,8 +23,7 @@ The portfolio serves as my professional online identity and helps companies or c
 
 ## 🛠️ Technologies Used
 
-* **Frontend:** HTML, CSS, JavaScript
-  *(or replace with React, Tailwind, etc. based on what you used)*
+* **Frontend:**React, Tailwind**
 * **Design:** Responsive layout, clean UI/UX
 * **Deployment:**  Vercel 
 
