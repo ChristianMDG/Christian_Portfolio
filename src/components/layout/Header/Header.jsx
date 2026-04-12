@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className=" bg-[var(--bg-color)] shadow-md fixed w-screen top-0 left-0 z-40">
      
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center ">
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center lg:px-12 xl:px-20 ">
         <div className="flex items-center gap-2 z-50">
          <div className="w-8 h-8 bg-gradient-to-br from-[var(--primary-color)] to-[var(--primary-color-hover)] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-500">
                   <img 

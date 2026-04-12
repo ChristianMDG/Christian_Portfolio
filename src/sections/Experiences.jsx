@@ -2,7 +2,7 @@ import { experiences, education } from '../constant/experience';
 const Experiences = () => {
   return (
     <div className="max-w-7xl mx-auto min-h-screen py-12 bg-black">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 w-full">
         {/* Header Section */}
         <div className="flex pt-10 justify-center items-center mb-16">
           <div className="border-t w-16 md:w-32 lg:w-64 border-gray-600 flex-grow"></div>

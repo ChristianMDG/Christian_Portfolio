@@ -8,7 +8,7 @@ const Footer = () => {
       {/* Background Elements - Subtle */}
       <div className="absolute inset-0 bg-gradient-to-t from-[var(--primary-color)]/3 to-transparent opacity-10"></div>
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10  sm:px-6 md:px-8 lg:px-12 xl:px-20 w-full">
         {/* Main Content Grid - Better Spacing */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start mb-8">
           
