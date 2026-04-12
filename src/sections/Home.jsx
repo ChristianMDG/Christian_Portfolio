@@ -185,7 +185,7 @@ const Home = () => {
 
 
           {/* Partie Image */}
-          <div className="flex-1 flex justify-center lg:justify-center order-1 lg:order-2 w-full lg:pt-0 sm:pt-0 pt-20 ">
+          {/* <div className="flex-1 flex justify-center lg:justify-center order-1 lg:order-2 w-full lg:pt-0 sm:pt-0 pt-20 ">
             <div className="relative">
               <div className="relative w-48 h-48 sm:w-40 sm:h-40 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-[50vh] xl:h-[50vh] border-2 border-[var(--primary-color)] rounded-full overflow-hidden ">
                 <img
@@ -200,6 +200,31 @@ const Home = () => {
                   <span className="text-xs sm:text-sm font-medium ">Open for work</span>
                 </div>
               </div>
+            </div>
+          </div> */}
+
+<div className="flex-1 flex justify-center lg:justify-end order-1 lg:order-2 w-full lg:pt-0 sm:pt-0 pt-20">
+            <div className="relative">
+              {/* Main image container with responsive sizing and animations */}
+              <div className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 2xl:w-[28rem] 2xl:h-[28rem] border-4 lg:border-[6px] border-[var(--primary-color)] rounded-full overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-500 ease-in-out">
+                <img
+                  src="/assets/images/christian.png"
+                  alt="Christian"
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-700 ease-in-out"
+                />
+              </div>
+              
+              {/* Status badge with improved positioning for desktop */}
+              <div className="absolute -bottom-4 -left-4 sm:-bottom-5 sm:-left-5 md:-bottom-6 md:-left-6 lg:-bottom-7 lg:-left-7 xl:-bottom-8 xl:-left-8 bg-[var(--primary-color)]/90 text-black px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 lg:px-6 lg:py-3 rounded-lg shadow-xl backdrop-blur-sm">
+                <div className="flex items-center gap-2 sm:gap-2.5 lg:gap-3">
+                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 lg:w-3 lg:h-3 bg-[#2bff00] rounded-full animate-pulse"></div>
+                  <span className="text-xs sm:text-sm lg:text-base font-semibold whitespace-nowrap">Open for work</span>
+                </div>
+              </div>
+
+              {/* Decorative circles for desktop */}
+              <div className="hidden lg:block absolute -top-10 -right-10 w-32 h-32 border-2 border-[var(--primary-color)]/30 rounded-full animate-pulse"></div>
+              <div className="hidden lg:block absolute -bottom-16 -left-16 w-40 h-40 border-2 border-[var(--primary-color)]/20 rounded-full animate-pulse delay-1000"></div>
             </div>
           </div>
         </div>
