@@ -43,7 +43,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="w-full min-h-screen py-12 ">
+    <div className="max-w-7xl mx-auto min-h-screen py-12 ">
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="flex pt-10 justify-center items-center mb-16">

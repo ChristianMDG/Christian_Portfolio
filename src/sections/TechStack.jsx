@@ -17,7 +17,7 @@ function TechStack() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-black">
+    <div className="max-w-7xl mx-auto min-h-screen bg-black">
       <div className="container mx-auto px-4 py-8">
         {/* Header Section */}
         <div className="flex pt-10 justify-center items-center mb-16">

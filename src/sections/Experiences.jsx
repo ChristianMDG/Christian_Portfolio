@@ -1,7 +1,7 @@
 import { experiences, education } from '../constant/experience';
 const Experiences = () => {
   return (
-    <div className="w-full min-h-screen py-12 bg-black">
+    <div className="max-w-7xl mx-auto min-h-screen py-12 bg-black">
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="flex pt-10 justify-center items-center mb-16">
