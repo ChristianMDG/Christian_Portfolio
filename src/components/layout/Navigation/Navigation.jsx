@@ -1,11 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Ajoutez cette importation
+import { Link ,useNavigate} from "react-router-dom"; // Ajoutez cette importation
 import { navigationItems } from "../../../constant/index";
 import { useState } from "react";
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState("accueil");
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate(); // Utilisez le hook useNavigate
 
   const toggleMenu = () => setIsOpen((prevIsOpen) => !prevIsOpen);
 
@@ -27,7 +28,7 @@ const Navigation = () => {
   };
 
   const handleViewCV = () => {
-    window.location.href = '/cv';
+    navigate("/cv");
   };
 
   // Écouteur pour détecter la section active au scroll
