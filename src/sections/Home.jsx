@@ -103,13 +103,13 @@ const Home = () => {
 
   return (
     <div
-      className="max-w-7xl mx-auto min-h-screen flex items-center justify-center text-white z-50"
+      className="container mx-auto min-h-[100vh] flex items-center justify-center text-white z-50"
     >
-      <div className=" px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 w-full ">
+      <div className=" px-4 sm:px-6 md:px-8 lg:px-10 xl:px-20 w-full lg:pt-24"> 
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 ">
           {/* Partie Texte */}
           <div className="flex-1 max-w-xxl order-2 lg:order-1  ">
-            <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight text-center lg:text-left min-h-[120px] sm:min-h-[140px] md:min-h-[160px]">
+            <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight text-center lg:text-left min-h-[120px] sm:min-h-[140px] md:min-h-[160px]">
               {renderAnimatedText()}
               {displayedText.length < fullText.length && (
                 <span className="ml-1 animate-pulse">|</span>
