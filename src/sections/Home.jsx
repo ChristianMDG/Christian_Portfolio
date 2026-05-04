@@ -10,7 +10,7 @@ const Home = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [roleIndex, setRoleIndex] = useState(0);
 
-  const baseText = "Christian is a ";
+  const baseText = "Christian RAVELOJAONA is a ";
   const roles = ["Data Scientist", "Full-Stack Developer"];
   const sloganText =
     "Transforming Data into Intelligence, Code into Innovation.";
