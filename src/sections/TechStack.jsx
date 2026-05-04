@@ -156,13 +156,6 @@ function TechStack() {
             </div>
           </div>
         </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <button className="bg-[var(--primary-color)] text-black px-8 py-3 rounded-lg font-semibold hover:bg-[var(--primary-color-hover)] transition-colors duration-300 firacode-semibold">
-            View Projects
-          </button>
-        </div>
       </div>
     </div>
   );
