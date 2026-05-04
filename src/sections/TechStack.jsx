@@ -31,9 +31,6 @@ function TechStack() {
 
         {/* Featured Technologies */}
         <div className="max-w-4xl mx-auto mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-[var(--primary-color)] mb-8 text-center firacode-semibold">
-            Core Technologies
-          </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {featuredTech.map((tech, index) => (
               <div
