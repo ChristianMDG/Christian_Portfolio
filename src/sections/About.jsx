@@ -4,7 +4,7 @@ import { myProjects } from '../constant';
 const About = () => {
   const [animatedText, setAnimatedText] = useState('');
   const [activeTab, setActiveTab] = useState('about');
-  const fullText = "Hello, I'm a developer";
+  const fullText = "Hello, I'm a passionate developer";
   const projectCount = myProjects.length
   useEffect(() => {
     let currentIndex = 0;
@@ -114,8 +114,8 @@ const About = () => {
               {activeTab === 'about' && (
                 <>
                   <p className="text-gray-400 text-xs sm:text-[1rem]  code-comment">
-                    I believe in the power of thoughtful design and clean code to create digital experiences 
-                    that not only function flawlessly but also delight and inspire.
+                    I care deeply about the intersection of thoughtful design and robust engineering. 
+                    My approach is grounded in writing maintainable code, designing scalable systems, and delivering interfaces that are both intuitive and visually refined.
                   </p>
                   <p className="text-gray-400 text-xs sm:text-[1rem]  code-comment">
                     With a background in both design and development, I bridge the gap between beautiful 
