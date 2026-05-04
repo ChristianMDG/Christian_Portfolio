@@ -4,7 +4,7 @@ import { myProjects } from '../constant';
 const About = () => {
   const [animatedText, setAnimatedText] = useState('');
   const [activeTab, setActiveTab] = useState('about');
-  const fullText = "Hello, I'm a Full-Stack developer";
+  const fullText = "Hello, I'm a developer";
   const projectCount = myProjects.length
   useEffect(() => {
     let currentIndex = 0;
