@@ -40,7 +40,7 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <Layout>
+    <Layout style = {{overflow: "hidden"}}>
       <section
         id="home"
         style={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}
