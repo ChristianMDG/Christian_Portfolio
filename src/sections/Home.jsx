@@ -15,7 +15,7 @@ const Home = () => {
   const sloganText =
     "Transforming Data into Intelligence, Code into Innovation.";
   const currentlyWorkingText = "Portfolio";
-  const quoteText = "The best way to predict the future is to code it.";
+  const quoteText = "Every day is an opportunity to learn something new.";
   const authorText = "- Dr. Code";
 
   // Animation du texte principal (Data Scientist <-> Full-Stack Developer)

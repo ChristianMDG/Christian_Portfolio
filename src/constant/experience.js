@@ -30,23 +30,28 @@ export const experiences = [
 ];
 
 export const education = [
+   {
+  year: "2026",
+  title: "Software Engineering",
+  institution: "42 Antananarivo",
+  description: "Project-based training focused on algorithms, system programming, and problem solving. Developed strong skills in C, memory management, and collaborative peer-to-peer learning."
+},
   {
     year: "2025",
     title: "Advanced Web Development",
     institution: "Haute École d'Informatique",
     description: "Specialized training in advanced web technologies and frameworks."
-  }
-  ,
+  },
+   {
+    year: "2025",
+    title: "Data scientist & IA",
+    institution: "Africa Tech Up",
+   description: "Focused on data analysis, machine learning, and AI. Built predictive models, processed datasets, and derived actionable insights through hands-on projects."
+  },
   {
     year: "2024",
     title: "Introduction to Computer Science",
     institution: "Passerelles Numériques Madagascar",
     description: "Basic computer science training focused on programming fundamentals and web development."
-  },
-   {
-    year: "2023",
-    title: "Management Informatics",
-    institution: "ISSIG",
-    description: "University-level training in computer science and management."
   }
 ];

@@ -1,101 +1,144 @@
-import { experiences, education } from '../constant/experience';
+import { education } from '../constant/experience';
+
 const Experiences = () => {
   return (
     <div className="container mx-auto min-h-screen py-12 bg-black">
-      <div className=" px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 w-full">
+      <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 w-full">
+        
         {/* Header Section */}
         <div className="flex pt-10 justify-center items-center mb-16">
           <div className="border-t w-16 md:w-32 lg:w-64 border-gray-600 flex-grow"></div>
           <h1 className="firacode-semibold sm:text-2xl md:text-3xl lg:text-4xl text-[var(--primary-color)]">
-            <span className="text-gray-600">|</span>Experiences<span className="text-gray-600">|</span>
+            <span className="text-gray-600">|</span>Education<span className="text-gray-600">|</span>
           </h1>
           <div className="border-t w-16 md:w-32 lg:w-64 border-gray-600 flex-grow"></div>
         </div>
 
-        {/* Timeline Section */}
+        {/* Education Section - "Academic Journey" Cascade Style */}
         <div className="max-w-6xl mx-auto">
-          {/* Professional Experience */}
-          <div className="mb-20">
+          <div>
             <div className="relative">
-              {/* Timeline line */}
-              <div className=" lg:flex md:flex hidden absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gray-800"></div>
+              {/* Decorative vertical line */}
+              <div className="absolute left-0 md:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[var(--primary-color)] via-gray-700 to-transparent"></div>
               
-              {experiences.map((exp, index) => (
+              {education.map((edu, index) => (
                 <div 
                   key={index}
-                  className={`flex flex-col md:flex-row items-center mb-12 ${
-                    index % 2 === 0 ? 'md:flex-row-reverse' : ''
-                  }`}
+                  className="relative group mb-12 pl-8 md:pl-16"
                 >
-                  {/* Left/right side */}
-                  <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'} mb-6 md:mb-0`}>
-                    <div className="bg-gray-900 p-6 rounded-lg border-l-4 border-[var(--primary-color)] hover:border-[var(--primary-color-hover)] transition-all duration-300 hover:transform hover:-translate-y-1">
-                      <span className="text-[var(--primary-color)] text-sm font-mono firacode-semibold">
-                        {exp.year}
-                      </span>
-                      <h3 className="text-xl font-bold text-white mt-2 mb-1">
-                        {exp.title}
-                      </h3>
-                      <p className="text-[var(--primary-color)] font-semibold mb-3">
-                        {exp.company}
-                      </p>
-                      <p className="text-gray-300 text-sm mb-4">
-                        {exp.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {exp.skills.map((skill, skillIndex) => (
-                          <span 
-                            key={skillIndex}
-                            className="px-3 py-1 bg-gray-800 text-[var(--primary-color)] text-xs rounded-full border border-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-black transition-colors duration-300 cursor-default"
-                          >
-                            {skill}
-                          </span>
-                        ))}
+                  {/* Connection point */}
+                  <div className="absolute left-0 md:left-[1.85rem] top-2 w-3 h-3 bg-[var(--primary-color)] rounded-full border-2 border-black group-hover:scale-150 transition-transform duration-300"></div>
+                  
+                  {/* Horizontal connection line */}
+                  <div className="absolute left-3 md:left-10 top-3 w-6 h-0.5 bg-[var(--primary-color)]/50 group-hover:w-10 transition-all duration-300"></div>
+                  
+                  {/* Card with "diploma" effect */}
+                  <div className="bg-gradient-to-r from-gray-900 to-transparent p-5 rounded-lg border-l-2 border-[var(--primary-color)] hover:border-l-4 transition-all duration-300 hover:translate-x-2">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                      {/* Year badge */}
+                      <div className="md:w-1/5">
+                        <span className="inline-block px-3 py-1 bg-[var(--primary-color)]/10 border border-[var(--primary-color)]/30 rounded-full text-[var(--primary-color)] text-sm font-mono firacode-semibold">
+                          {edu.year}
+                        </span>
+                      </div>
+                      
+                      {/* Main content */}
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-white group-hover:text-[var(--primary-color)] transition-colors duration-300">
+                          {edu.title}
+                        </h3>
+                        <div className="flex items-center gap-2 mt-1 mb-2">
+                          <svg className="w-4 h-4 text-[var(--primary-color)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                          </svg>
+                          <p className="text-[var(--primary-color)] font-semibold text-sm">
+                            {edu.institution}
+                          </p>
+                        </div>
+                        <p className="text-gray-300 text-sm leading-relaxed">
+                          {edu.description}
+                        </p>
+                        
+                        {/* Optional: main subjects */}
+                        {edu.subjects && (
+                          <div className="flex flex-wrap gap-2 mt-3">
+                            {edu.subjects.map((subject, i) => (
+                              <span key={i} className="text-xs text-gray-400 bg-gray-800/50 px-2 py-0.5 rounded">
+                                {subject}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                      
+                      {/* Decorative icon */}
+                      <div className="hidden md:block text-right opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <svg className="w-6 h-6 text-[var(--primary-color)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
                       </div>
                     </div>
-                  </div>
-                  
-                  {/* Central point */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[var(--primary-color)] rounded-full border-4 border-black z-10"></div>
-                  
-                  {/* Year */}
-                  <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pl-12 text-left' : 'md:pr-12 text-right'} hidden md:block`}>
-                    <span className="text-2xl font-bold text-[var(--primary-color)] firacode-semibold">
-                      {exp.year.split(' ')[0]}
-                    </span>
                   </div>
                 </div>
               ))}
             </div>
           </div>
+        </div>
 
-          {/* Education */}
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-[var(--primary-color)] mb-12 text-center firacode-semibold">
-              Education
-            </h2>
-            
-            <div className="grid md:grid-cols-3 gap-6">
-              {education.map((edu, index) => (
-                <div 
-                  key={index}
-                  className="bg-gray-900 p-6 rounded-lg border-t-4 border-[var(--primary-color)] hover:border-[var(--primary-color-hover)] transition-all duration-300 hover:transform hover:-translate-y-2 group"
-                >
-                  <div className="text-[var(--primary-color)] text-lg font-bold firacode-semibold mb-2 group-hover:text-[var(--primary-color-hover)] transition-colors">
-                    {edu.year}
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">
-                    {edu.title}
-                  </h3>
-                  <p className="text-[var(--primary-color)] font-semibold mb-3">
-                    {edu.institution}
-                  </p>
-                  <p className="text-gray-300 text-sm">
-                    {edu.description}
-                  </p>
-                </div>
-              ))}
+        {/* ========== STYLED FOOTER ========== */}
+        <div className="mt-20 pt-8 border-t ">
+          {/* Statistics */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto mb-12">
+            <div className="text-center p-4 rounded-lg bg-gray-900/50 hover:bg-gray-900 transition-all duration-300 hover:transform hover:-translate-y-1">
+              <div className="text-3xl font-bold text-[var(--primary-color)] mb-1">
+                {education.length}
+              </div>
+              <div className="text-xs text-gray-400 font-mono">
+                COURSE{education.length > 1 ? 'S' : ''}
+              </div>
             </div>
+            <div className="text-center p-4 rounded-lg bg-gray-900/50 hover:bg-gray-900 transition-all duration-300 hover:transform hover:-translate-y-1">
+              <div className="text-3xl font-bold text-[var(--primary-color)] mb-1">
+                {education.reduce((acc, edu) => {
+                  const years = edu.year.match(/\d{4}/g);
+                  return years ? acc + (parseInt(years[1]) - parseInt(years[0])) : acc;
+                }, 0)}+
+              </div>
+              <div className="text-xs text-gray-400 font-mono">
+                YEARS OF STUDY
+              </div>
+            </div>
+            <div className="text-center p-4 rounded-lg bg-gray-900/50 hover:bg-gray-900 transition-all duration-300 hover:transform hover:-translate-y-1">
+              <div className="text-3xl font-bold text-[var(--primary-color)] mb-1">
+                🎓
+              </div>
+              <div className="text-xs text-gray-400 font-mono">
+                DEGREES EARNED
+              </div>
+            </div>
+          </div>
+
+          {/* Quote / Motto */}
+        
+
+          {/* Decorative line with logo */}
+          <div className="flex items-center justify-center gap-4">
+            <div className="h-px w-12 bg-gradient-to-r from-transparent to-gray-700"></div>
+            <div className="flex gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-[var(--primary-color)]/50"></div>
+              <div className="w-1.5 h-1.5 rounded-full bg-[var(--primary-color)]/80"></div>
+              <div className="w-1.5 h-1.5 rounded-full bg-[var(--primary-color)]"></div>
+              <div className="w-1.5 h-1.5 rounded-full bg-[var(--primary-color)]/80"></div>
+              <div className="w-1.5 h-1.5 rounded-full bg-[var(--primary-color)]/50"></div>
+            </div>
+            <div className="h-px w-12 bg-gradient-to-l from-transparent to-gray-700"></div>
+          </div>
+
+          {/* Copyright / Year */}
+          <div className="text-center mt-6">
+            <p className="text-gray-600 text-xs font-mono">
+              {new Date().getFullYear()} — Academic Journey
+            </p>
           </div>
         </div>
       </div>
@@ -103,4 +146,4 @@ const Experiences = () => {
   );
 };
 
-export default Experiences
+export default Experiences;
