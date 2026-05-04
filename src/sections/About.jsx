@@ -114,12 +114,10 @@ const About = () => {
               {activeTab === 'about' && (
                 <>
                   <p className="text-gray-400 text-xs sm:text-[1rem]  code-comment">
-                    I care deeply about the intersection of thoughtful design and robust engineering. 
-                    My approach is grounded in writing maintainable code, designing scalable systems, and delivering interfaces that are both intuitive and visually refined.
+                   I focus on the balance between design and engineering to build clean and reliable products.
                   </p>
                   <p className="text-gray-400 text-xs sm:text-[1rem]  code-comment">
-                    With a background in both design and development, I bridge the gap between beautiful 
-                    interfaces and robust technical solutions.
+                    With experience in both design and development, I turn ideas into functional, performant, and accessible applications.
                   </p>
                   <p className="text-gray-400 text-xs sm:text-[1rem]  code-comment">
                     Every project is an opportunity to learn, grow, and push the boundaries of what's possible 
