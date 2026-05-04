@@ -131,12 +131,10 @@ const About = () => {
               {activeTab === 'vision' && (
                 <div className="space-y-4">
                   <p className="text-gray-400 text-xs sm:text-[1rem]  code-comment">
-                    I envision a digital world where technology enhances human connection rather than replaces it, 
-                    where interfaces are intuitive, and experiences are meaningful.
+                   I aim to build a digital world where technology strengthens human connection instead of replacing it, with intuitive interfaces and meaningful user experiences.
                   </p>
                   <p className="text-gray-400 text-xs sm:text-[1rem]  code-comment">
-                    My mission is to create software that not only solves problems but also brings joy and 
-                    efficiency to people's lives.
+                    My goal is to create software that solves real problems while improving people’s daily lives through clarity, efficiency, and simplicity.
                   </p>
                 </div>
               )}
