@@ -15,7 +15,7 @@ const Header = () => {
                   />
                 </div>
           <span className="font-audiowide-title text-amber-50">
-            Chris <span className='font-audiowide-title pri' > tian</span>
+            Christian
           </span>
         </div>
         <Navigation />
