@@ -14,8 +14,8 @@ const Header = () => {
                     className="w-4 h-4 filter brightness-0 invert group-hover:rotate-12 transition-transform duration-500"
                   />
                 </div>
-          <span className="firacode-bold text-amber-50">
-            Christian
+          <span className="font-audiowide-title text-amber-50">
+            Chris <span className='font-audiowide-title pri' > tian</span>
           </span>
         </div>
         <Navigation />

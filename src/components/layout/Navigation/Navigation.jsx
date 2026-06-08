@@ -59,7 +59,7 @@ const Navigation = () => {
               key={item.sectionId}
               onClick={() => handleNavClick(item.sectionId)}
               className={`
-                relative px-3 py-2 transition-all duration-300 firacode-medium text-sm
+                relative px-3 py-2 transition-all duration-300 font-audiowide text-sm
                 ${
                   activeSection === item.sectionId
                     ? "text-[var(--primary-color)]"
