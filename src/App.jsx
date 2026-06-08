@@ -7,7 +7,7 @@ import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Projects from "./sections/Projects";
 import TechStack from "./sections/TechStack";
-import Experiences from "./sections/Experiences";
+import Educations from "./sections/Educations";
 import CVPage from "./pages/CVpage";
 
 // Composant Portfolio Principal
@@ -70,14 +70,14 @@ const Portfolio = () => {
         </div>
         <Projects />
       </section>
-      <section id="experiences" style={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}
+      <section id="educations" style={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}
       >
         <div className="floating-dots-fullscreen">
           {Array.from({ length: 25 }).map((_, i) => (
             <div key={i} className="floating-dot"></div>
           ))}
         </div>
-        <Experiences />
+        <Educations />
       </section>
       <section id="techstack" style={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}
       >

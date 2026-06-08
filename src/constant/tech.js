@@ -57,7 +57,7 @@ export const techCategories = [
       technologies: [
         { name: "Docker", icon: DockerIcon, level: "Basic" },
         { name: "AWS", icon: AwsIcon, level: "Basic" },
-        { name: "Gitub", icon: GithubIcon, level: "Advanced" },
+        { name: "Github", icon: GithubIcon, level: "Advanced" },
         { name: "Git", icon: GitIcon, level: "Advanced" },
         { name: "Figma", icon: FigmaIcon, level: "Intermediate" },
         { name: "Postman", icon: PostmanIcon, level: "Advanced" }

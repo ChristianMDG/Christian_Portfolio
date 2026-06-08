@@ -1,4 +1,4 @@
-export const experiences = [
+export const educations = [
   {
     year: "2023 - Present",
     title: "Senior Full Stack Developer",

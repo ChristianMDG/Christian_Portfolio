@@ -25,17 +25,17 @@ const Footer = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white firacode-semibold">
+                <h3 className="text-xl font-bold text-white font-audiowide ">
                   Christian<span className="text-[var(--primary-color)]">_</span>
                 </h3>
-                <p className="text-gray-400 text-sm mt-1 firacode-medium">
+                <p className="text-gray-400 mt-1 font-quicksand ">
                   Full-Stack Developer
                 </p>
               </div>
             </div>
             
             <div className="pt-2">
-              <p className="text-gray-400 text-sm leading-relaxed firacode-light">
+              <p className="text-gray-400  leading-relaxed  font-quicksand ">
                 Creating digital experiences with modern technologies and clean code principles.
               </p>
               
@@ -52,7 +52,7 @@ const Footer = () => {
 
           {/* Middle Column - Contact */}
           <div className="space-y-5">
-            <h4 className="text-white text-lg font-semibold firacode-medium">
+            <h4 className="text-white text-lg font-semibold font-audiowide">
               Contact Info
             </h4>
             
@@ -64,7 +64,7 @@ const Footer = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-gray-300 text-sm font-medium mb-1">Email</p>
+                  <p className="text-gray-300 text-sm font-audiowide mb-1">Email</p>
                   <a 
                     href="mailto:christianravelojaona186@gmail.com" 
                     className="text-gray-400 hover:text-[var(--primary-color)] transition-colors duration-300 text-sm break-words"
@@ -82,7 +82,7 @@ const Footer = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-gray-300 text-sm font-medium mb-1">Location</p>
+                  <p className="text-gray-300 text-sm font-audiowide mb-1">Location</p>
                   <span className="text-gray-400 text-sm">
                     Antananarivo, Madagascar
                   </span>
@@ -93,7 +93,7 @@ const Footer = () => {
 
           {/* Right Column - Quick Links */}
           <div className="space-y-5">
-            <h4 className="text-white text-lg font-semibold firacode-medium">
+            <h4 className="text-white text-lg font-audiowide ">
               Quick Links
             </h4>
             
@@ -102,7 +102,7 @@ const Footer = () => {
                 <a
                   key={link}
                   href={`#${link.toLowerCase()}`}
-                  className="block text-gray-400 hover:text-[var(--primary-color)] transition-colors duration-300 text-sm firacode-regular hover:translate-x-1 transition-transform duration-300"
+                  className="block text-gray-400 hover:text-[var(--primary-color)] transition-colors duration-300  font-quicksand hover:translate-x-1 transition-transform duration-300"
                 >
                   → {link}
                 </a>

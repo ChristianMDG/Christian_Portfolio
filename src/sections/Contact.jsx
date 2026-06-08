@@ -67,13 +67,16 @@ const Contact = () => {
     <div className="container mx-auto min-h-screen bg-black">
       <div className=" px-4 py-8 sm:px-6 md:px-8 lg:px-12 xl:px-20 w-full">
         {/* Header Section */}
-        <div className="flex pt-10 justify-center items-center mb-16">
-          <div className="border-t w-16 md:w-32 lg:w-64 border-gray-600 flex-grow"></div>
-          <h1 className="font-audiowide-title sm:text-2xl md:text-3xl lg:text-4xl text-[var(--primary-color)]">
-            <span className="text-gray-600">|</span>Contact
-            <span className="text-gray-600">|</span>
-          </h1>
-          <div className="border-t w-16 md:w-32 lg:w-64 border-gray-600 flex-grow"></div>
+        <div className="relative flex justify-center items-center mb-16">
+          <div className="absolute left-0 right-0 flex justify-center">
+            <div className="border-t w-16 md:w-32 lg:w-48 border-gray-700 absolute left-0 top-1/2"></div>
+            <div className="border-t w-16 md:w-32 lg:w-48 border-gray-700 absolute right-0 top-1/2"></div>
+          </div>
+          <div className="relative z-10 px-6 py-3 bg-gradient-to-r from-[var(--primary-color)]/10 via-[var(--primary-color)]/5 to-[var(--primary-color)]/10 rounded-full backdrop-blur-sm">
+            <h2 className="font-audiowide-title text-xl sm:text-2xl md:text-3xl text-[var(--primary-color)]">
+              Contact
+            </h2>
+          </div>
         </div>
 
         {/* Contact Content */}
@@ -82,10 +85,10 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl font-bold text-white mb-4">
+                <h2 className="text-3xl font-bold text-white mb-4 font-audiowide">
                   Let's Work Together
                 </h2>
-                <p className="text-gray-400 text-lg leading-relaxed">
+                <p className="text-gray-400 text-lg leading-relaxed font-quicksand">
                   I'm always open to discussing new projects, creative
                   opportunities and innovative collaborations.
                 </p>
@@ -110,8 +113,8 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold">Email</h3>
-                    <p className="text-gray-400">christianravelojaona186@gmail.com</p>
+                    <h3 className="text-white font-audiowide">Email</h3>
+                    <p className="text-gray-400 font-quicksand ">christianravelojaona186@gmail.com</p>
                   </div>
                 </div>
 
@@ -132,8 +135,8 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold">Phone</h3>
-                    <p className="text-gray-400">+261 38 65 746 67</p>
+                    <h3 className="text-white font-audiowide">Phone</h3>
+                    <p className="text-gray-400 font-quicksand ">+261 38 65 746 67</p>
                   </div>
                 </div>
 
@@ -160,14 +163,14 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold">Location</h3>
-                    <p className="text-gray-400">Antananarivo, Madagascar</p>
+                    <h3 className="text-white font-audiowide">Location</h3>
+                    <p className="text-gray-400 font-quicksand">Antananarivo, Madagascar</p>
                   </div>
                 </div>
               </div>
 
               {/* Social Links */}
-              <div className="flex gap-4">
+              <div className="flex gap-4 font-audiowide ">
                 {["LinkedIn", "GitHub", "Twitter"].map((social) => (
                   <button
                     key={social}
@@ -191,7 +194,7 @@ const Contact = () => {
               <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-white text-sm font-medium mb-2">
+                    <label className="block text-white text-sm font-medium mb-2 font-audiowide">
                       First Name *
                     </label>
                     <input
@@ -200,12 +203,12 @@ const Contact = () => {
                       value={formData.user_first_name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--primary-color)] transition-colors duration-300"
+                      className=" font-quicksand w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--primary-color)] transition-colors duration-300"
                       placeholder="Your first name"
                     />
                   </div>
                   <div>
-                    <label className="block text-white text-sm font-medium mb-2">
+                    <label className="block text-white text-sm font-medium mb-2 font-audiowide">
                       Last Name *
                     </label>
                     <input
@@ -214,14 +217,14 @@ const Contact = () => {
                       value={formData.user_name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--primary-color)] transition-colors duration-300"
+                      className=" font-quicksand w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--primary-color)] transition-colors duration-300"
                       placeholder="Your last name"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-white text-sm font-medium mb-2">
+                  <label className="block text-white text-sm font-medium mb-2 font-audiowide">
                     Email *
                   </label>
                   <input
@@ -230,13 +233,13 @@ const Contact = () => {
                     value={formData.user_email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--primary-color)] transition-colors duration-300"
+                    className=" font-quicksand w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--primary-color)] transition-colors duration-300"
                     placeholder="your.email@example.com"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-white text-sm font-medium mb-2">
+                  <label className="block text-white text-sm font-medium mb-2 font-audiowide">
                     Subject *
                   </label>
                   <input
@@ -245,13 +248,13 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--primary-color)] transition-colors duration-300"
+                    className=" font-quicksand w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--primary-color)] transition-colors duration-300"
                     placeholder="Subject of your message"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-white text-sm font-medium mb-2">
+                  <label className="block text-white text-sm font-medium mb-2 font-audiowide">
                     Message *
                   </label>
                   <textarea
@@ -260,7 +263,7 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--primary-color)] transition-colors duration-300 resize-none"
+                    className=" font-quicksand w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--primary-color)] transition-colors duration-300 resize-none"
                     placeholder="Describe your project or request..."
                   ></textarea>
                 </div>
@@ -268,7 +271,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className={`w-full font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 ${
+                  className={`w-full font-audiowide py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 ${
                     isLoading
                       ? "bg-gray-600 text-gray-400 cursor-not-allowed"
                       : "bg-[var(--primary-color)] text-black hover:bg-[var(--primary-color-hover)]"

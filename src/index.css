@@ -1101,6 +1101,7 @@ body {
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  font-family: var(--font-quicksand);
 }
 
 body::-webkit-scrollbar {

@@ -23,13 +23,16 @@ const About = () => {
     <div className="container mx-auto min-h-screen relative overflow-hidden">
       <div className="py-8 relative z-10 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 w-full">
         {/* Elegant Header Section */}
-        <div className="flex pt-10 justify-center items-center mb-16">
-          <div className="border-t w-16 md:w-32 lg:w-64 border-gray-600 flex-grow"></div>
-          <h1 className="font-audiowide-title sm:text-2xl md:text-3xl lg:text-4xl text-[var(--primary-color)]">
-            <span className="text-gray-600">|</span>About
-            <span className="text-gray-600">|</span>
-          </h1>
-          <div className="border-t w-16 md:w-32 lg:w-64 border-gray-600 flex-grow"></div>
+        <div className="relative flex justify-center items-center mb-16">
+          <div className="absolute left-0 right-0 flex justify-center">
+            <div className="border-t w-16 md:w-32 lg:w-48 border-gray-700 absolute left-0 top-1/2"></div>
+            <div className="border-t w-16 md:w-32 lg:w-48 border-gray-700 absolute right-0 top-1/2"></div>
+          </div>
+          <div className="relative z-10 px-6 py-3 bg-gradient-to-r from-[var(--primary-color)]/10 via-[var(--primary-color)]/5 to-[var(--primary-color)]/10 rounded-full backdrop-blur-sm">
+            <h2 className="font-audiowide-title text-xl sm:text-2xl md:text-3xl text-[var(--primary-color)]">
+             About
+            </h2>
+          </div>
         </div>
 
         {/* Main Content */}
