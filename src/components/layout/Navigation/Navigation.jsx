@@ -23,7 +23,7 @@ const Navigation = () => {
   };
 
   const handleDownloadCV = () => {
-    console.log("Téléchargement du CV...");
+    console.log("Downloading CV...");
     window.open("/CV.pdf", "_blank");
   };
 
