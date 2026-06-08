@@ -140,7 +140,7 @@ const Projects = () => {
                 />
               </div>
               <div className="flex-1">
-                <span className="text-[var(--primary-color)] firacode-regular text-sm bg-[var(--primary-color)]/10 px-3 py-1 rounded-full">
+                <span className="text-[var(--primary-color)]  font-audiowide text-sm bg-[var(--primary-color)]/10 px-3 py-1 rounded-full">
                   Project {selectedProjectIndex + 1} of {projectCount}
                 </span>
               </div>
@@ -148,7 +148,7 @@ const Projects = () => {
 
             {/* Project Details */}
             <div className="flex flex-col gap-5 text-white-600 my-5 z-10">
-              <p className="text-white lg:text-2xl firacode-semibold">
+              <p className="text-white lg:text-2xl  font-audiowide">
                 {currentProject.title}
               </p>
 

@@ -48,7 +48,7 @@ const Educations = () => {
             <div key={index} className="group mb-4">
               <div className="relative">
                 {/* Ligne de connexion */}
-                <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-[var(--primary-color)] via-gray-700 to-transparent"></div>
+                <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-[var(--primary-color)] via-gray-700 to-transparent "></div>
                 
                 <div className="ml-8 pl-6 pb-8">
                   {/* Header de la carte */}
@@ -66,8 +66,8 @@ const Educations = () => {
                   </div>
 
                   {/* Contenu */}
-                  <div className="bg-gradient-to-r from-gray-900/50 to-transparent p-6 rounded-lg border-l-2 border-[var(--primary-color)] hover:border-l-4 transition-all">
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[var(--primary-color)] transition-colors">
+                  <div className="bg-gradient-to-r from-gray-900/50 to-transparent p-6 rounded-lg border-l-2 border-[var(--primary-color)] hover:border-l-4 transition-all  ">
+                    <h3 className="text-xl  font-audiowide text-white mb-2 group-hover:text-[var(--primary-color)] transition-colors">
                       {edu.title}
                     </h3>
                     <p className="text-[var(--primary-color)] text-sm mb-3 font-mono">

@@ -130,17 +130,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-
-        {/* Made with love - Subtle */}
-        <div className="text-center mt-6 pt-4 border-t border-gray-900/30">
-          <p className="text-gray-600 text-xs firacode-light">
-            Built with <span className="text-[var(--primary-color)]">❤️</span> using React & Tailwind CSS
-          </p>
-        </div>
       </div>
-
-      {/* Bottom accent line */}
-      <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-[var(--primary-color)]/20 to-transparent"></div>
     </footer>
   )
 }
