@@ -1,11 +1,11 @@
 export const myProjects = [
   {
-    title: 'Podcastr - AI Podcast Platform',
-    desc: 'Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
+    title: 'A-Nofa-Trano',
+    desc: 'A real estate rental platform in Madagascar that connects tenants and property owners safely through a centralized Admin system. Prevents scams through strict property validation.',
     subdesc:
-      'Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.',
-    href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
-   liveDemo: '/assets/project/pokedex.mp4',
+      'Full-stack app with React.js (Atomic Design), Node.js, Express.js (MVC), Prisma ORM, PostgreSQL and Docker. Features a triangular messaging system between Tenant, Admin and Landlord.',
+    href: 'https://github.com/ChristianMDG/A_nofa_trano',
+    liveDemo: 'https://github.com/ChristianMDG/A_nofa_trano',
     logo: '/assets/images/project-logo1.png',
     logoStyle: {
       backgroundColor: '#2A1816',
@@ -17,23 +17,37 @@ export const myProjects = [
       {
         id: 1,
         name: 'React.js',
-        path: '/assets/images/react.svg',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
       },
       {
         id: 2,
-        name: 'TailwindCSS',
-        path: '/assets/images/tailwindcss.png',
+        name: 'TypeScript',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
       },
-     
+      {
+        id: 3,
+        name: 'Node.js',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+      },
+      {
+        id: 4,
+        name: 'PostgreSQL',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
+      },
+      {
+        id: 5,
+        name: 'Docker',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
+      },
     ],
   },
   {
-    title: 'LiveDoc - Real-Time Google Docs Clone',
-    desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
+    title: 'Planifeo App',
+    desc: 'A full-stack planning and task management application with a clean dashboard interface for organizing projects and schedules.',
     subdesc:
-      'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
-    href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
-   liveDemo: '/assets/project/project2.mp4',
+      'Built with React, Vite on the frontend and Node.js, Express.js, Prisma ORM on the backend, connected to a PostgreSQL database and deployed on Vercel.',
+    href: 'https://planifeo.vercel.app/',
+    liveDemo: 'https://planifeo.vercel.app/',
     logo: '/assets/images/project-logo2.png',
     logoStyle: {
       backgroundColor: '#13202F',
@@ -45,32 +59,32 @@ export const myProjects = [
       {
         id: 1,
         name: 'React.js',
-        path: '/assets/images/react.svg',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
       },
       {
         id: 2,
-        name: 'TailwindCSS',
-        path: '/assets/images/tailwindcss.png',
+        name: 'Node.js',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
       },
       {
         id: 3,
-        name: 'TypeScript',
-        path: '/assets/images/typescript.png',
+        name: 'Express.js',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
       },
       {
         id: 4,
-        name: 'Framer Motion',
-        path: '/assets/images/framer.png',
+        name: 'PostgreSQL',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
       },
     ],
   },
   {
-    title: 'CarePulse - Health Management System',
-    desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
+    title: 'Christian Portfolio',
+    desc: 'My personal developer portfolio showcasing my skills, projects, and professional journey with a modern and responsive design.',
     subdesc:
-      'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
-    href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
-   liveDemo: '/assets/project/project3.mp4',
+      'Built with React, TailwindCSS and Framer Motion. Features sections for introduction, skills, projects, and contact. Deployed on Vercel.',
+    href: 'https://christian-portfolio-u9jz.vercel.app/',
+    liveDemo: 'https://christian-portfolio-u9jz.vercel.app/',
     logo: '/assets/images/project-logo3.png',
     logoStyle: {
       backgroundColor: '#60f5a1',
@@ -84,33 +98,28 @@ export const myProjects = [
       {
         id: 1,
         name: 'React.js',
-        path: '/assets/images/react.svg',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
       },
       {
         id: 2,
         name: 'TailwindCSS',
-        path: '/assets/images/tailwindcss.png',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
       },
       {
         id: 3,
-        name: 'TypeScript',
-        path: '/assets/images/typescript.png',
-      },
-      {
-        id: 4,
-        name: 'Framer Motion',
-        path: '/assets/images/framer.png',
+        name: 'Vite',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg',
       },
     ],
   },
   {
-    title: 'Horizon - Online Banking Platform',
-    desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
+    title: 'Pokedex',
+    desc: 'An interactive and fun Pokedex app that lets you explore all Pokémon with search, filtering, and detailed stats per Pokémon.',
     subdesc:
-      'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
-    href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
-    liveDemo: '/assets/project/project4.mp4',
-    logo: '/assets/images//project-logo4.png',
+      'Built with React, Vite and TailwindCSS. Consumes the public PokéAPI to display real-time Pokémon data. Deployed on Vercel.',
+    href: 'https://pokedex-tta8.vercel.app/',
+    liveDemo: 'https://pokedex-tta8.vercel.app/',
+    logo: '/assets/images/project-logo4.png',
     logoStyle: {
       backgroundColor: '#0E1F38',
       border: '0.2px solid #0E2D58',
@@ -121,32 +130,27 @@ export const myProjects = [
       {
         id: 1,
         name: 'React.js',
-        path: '/assets/images/react.svg',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
       },
       {
         id: 2,
         name: 'TailwindCSS',
-        path: '/assets/images/tailwindcss.png',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
       },
       {
         id: 3,
-        name: 'TypeScript',
-        path: '/assets/images/typescript.png',
-      },
-      {
-        id: 4,
-        name: 'Framer Motion',
-        path: '/assets/images/framer.png',
+        name: 'Vite',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg',
       },
     ],
   },
   {
-    title: 'Imaginify - AI Photo Manipulation App',
-    desc: 'Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.',
+    title: 'Traffic-AI',
+    desc: 'A data science project that predicts road traffic volume using temporal and weather data to anticipate congestion levels in urban areas.',
     subdesc:
-      'Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
-    href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
-    liveDemo: '/assets/project/project5.mp4',
+      'Built with Python, Streamlit and Pandas. Uses machine learning models trained on historical traffic datasets. Deployed on Streamlit Cloud.',
+    href: 'https://traffic-ai-3szvrge57wehtps7ghcb2d.streamlit.app/',
+    liveDemo: 'https://traffic-ai-3szvrge57wehtps7ghcb2d.streamlit.app/',
     logo: '/assets/images/project-logo5.png',
     logoStyle: {
       backgroundColor: '#1C1A43',
@@ -157,24 +161,19 @@ export const myProjects = [
     tags: [
       {
         id: 1,
-        name: 'React.js',
-        path: '/assets/images/react.svg',
+        name: 'Python',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
       },
       {
         id: 2,
-        name: 'TailwindCSS',
-        path: '/assets/images/tailwindcss.png',
+        name: 'Pandas',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg',
       },
       {
         id: 3,
-        name: 'TypeScript',
-        path: '/assets/images/typescript.png',
-      },
-      {
-        id: 4,
-        name: 'Framer Motion',
-        path: '/assets/images/framer.png',
+        name: 'Jupyter',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg',
       },
     ],
-  }
+  },
 ];
