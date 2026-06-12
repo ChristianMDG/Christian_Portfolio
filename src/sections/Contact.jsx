@@ -21,11 +21,12 @@ const Contact = () => {
     }));
   };
 
- const EMAILJS_CONFIG = {
+  const EMAILJS_CONFIG = {
     SERVICE_ID: "service_1riq4va", 
     TEMPLATE_ID: "template_4961plf", 
     PUBLIC_KEY: "A4aWT1Mu5D-dOHMMg"
   };
+
   const sendEmail = (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -35,7 +36,7 @@ const Contact = () => {
         EMAILJS_CONFIG.SERVICE_ID,
         EMAILJS_CONFIG.TEMPLATE_ID,
         formRef.current,
-       EMAILJS_CONFIG.PUBLIC_KEY
+        EMAILJS_CONFIG.PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -58,9 +59,18 @@ const Contact = () => {
         (error) => {
           console.log("Failed to send email:", error.text);
           setIsLoading(false);
-        
         }
       );
+  };
+
+  // URLs des réseaux sociaux
+  const socialLinks = {
+    LinkedIn: "https://www.linkedin.com/in/christian-ravelojaona-a934b0305/",
+    GitHub: "https://github.com/ChristianMDG"
+  };
+
+  const handleSocialClick = (social) => {
+    window.open(socialLinks[social], "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -114,7 +124,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-audiowide">Email</h3>
-                    <p className="text-gray-400 font-quicksand ">christianravelojaona186@gmail.com</p>
+                    <p className="text-gray-400 font-quicksand">christianravelojaona186@gmail.com</p>
                   </div>
                 </div>
 
@@ -136,7 +146,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-audiowide">Phone</h3>
-                    <p className="text-gray-400 font-quicksand ">+261 38 65 746 67</p>
+                    <p className="text-gray-400 font-quicksand">+261 38 65 746 67</p>
                   </div>
                 </div>
 
@@ -169,16 +179,20 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Social Links */}
-              <div className="flex gap-4 font-audiowide ">
-                {["LinkedIn", "GitHub", "Twitter"].map((social) => (
-                  <button
-                    key={social}
-                    className="px-6 py-3 border border-gray-700 text-gray-300 rounded-lg hover:border-[var(--primary-color)] hover:text-[var(--primary-color)] transition-all duration-300"
-                  >
-                    {social}
-                  </button>
-                ))}
+              {/* Social Links - Avec redirection */}
+              <div className="flex gap-4 font-audiowide">
+                <button
+                  onClick={() => handleSocialClick("LinkedIn")}
+                  className="px-6 py-3 border border-gray-700 text-gray-300 rounded-lg hover:border-[var(--primary-color)] hover:text-[var(--primary-color)] transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
+                >
+                  LinkedIn
+                </button>
+                <button
+                  onClick={() => handleSocialClick("GitHub")}
+                  className="px-6 py-3 border border-gray-700 text-gray-300 rounded-lg hover:border-[var(--primary-color)] hover:text-[var(--primary-color)] transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
+                >
+                  GitHub
+                </button>
               </div>
             </div>
 
@@ -203,7 +217,7 @@ const Contact = () => {
                       value={formData.user_first_name}
                       onChange={handleInputChange}
                       required
-                      className=" font-quicksand w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--primary-color)] transition-colors duration-300"
+                      className="font-quicksand w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--primary-color)] transition-colors duration-300"
                       placeholder="Your first name"
                     />
                   </div>
@@ -217,7 +231,7 @@ const Contact = () => {
                       value={formData.user_name}
                       onChange={handleInputChange}
                       required
-                      className=" font-quicksand w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--primary-color)] transition-colors duration-300"
+                      className="font-quicksand w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--primary-color)] transition-colors duration-300"
                       placeholder="Your last name"
                     />
                   </div>
@@ -233,7 +247,7 @@ const Contact = () => {
                     value={formData.user_email}
                     onChange={handleInputChange}
                     required
-                    className=" font-quicksand w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--primary-color)] transition-colors duration-300"
+                    className="font-quicksand w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--primary-color)] transition-colors duration-300"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -248,7 +262,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
-                    className=" font-quicksand w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--primary-color)] transition-colors duration-300"
+                    className="font-quicksand w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--primary-color)] transition-colors duration-300"
                     placeholder="Subject of your message"
                   />
                 </div>
@@ -263,7 +277,7 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     rows={6}
-                    className=" font-quicksand w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--primary-color)] transition-colors duration-300 resize-none"
+                    className="font-quicksand w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--primary-color)] transition-colors duration-300 resize-none"
                     placeholder="Describe your project or request..."
                   ></textarea>
                 </div>
