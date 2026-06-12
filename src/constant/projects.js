@@ -47,6 +47,28 @@ export const myProjects = [
     ],
   },
   {
+    title: 'EcosystemVert',
+    desc: 'A green ecosystem web application built as a modern fullstack platform. The client interface connects to a dedicated backend to deliver a complete and responsive user experience.',
+    subdesc:
+      'Frontend built with React, TypeScript and Vite. Configured with ESLint and deployed on Vercel. Part of a fullstack EcosystemVert project with a separate backend.',
+    href: 'https://github.com/ChristianMDG/EcosystemVertClient',
+    liveDemo: 'https://ecosystem-vert-client-lv3d.vercel.app',
+    placeholder: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80',
+    logo: '/assets/images/project-logo4.png',
+    logoStyle: {
+      backgroundColor: '#0a1f0a',
+      border: '0.2px solid #2d8a2d',
+      boxShadow: '0px 0px 60px 0px #2d8a2d4D',
+    },
+    spotlight: '/assets/images/spotlight4.png',
+    tags: [
+      { id: 1, name: 'React.js', path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+      { id: 2, name: 'TypeScript', path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+      { id: 3, name: 'Vite', path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg' },
+      { id: 4, name: 'JavaScript', path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+    ],
+  },
+  {
     title: 'Traffic-AI',
     desc: 'A data science project that predicts road traffic volume using temporal and weather data. Anticipates congestion levels in urban areas using machine learning models.',
     subdesc:
