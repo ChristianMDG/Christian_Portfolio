@@ -3,6 +3,7 @@ import { myProjects } from "../constant";
 const About = () => {
   const [animatedText, setAnimatedText] = useState("");
   const [activeTab, setActiveTab] = useState("about");
+  const [imageLoaded, setImageLoaded] = useState(false);
   const fullText = "I'm a passionate developer";
   const projectCount = myProjects.length;
   useEffect(() => {
@@ -30,7 +31,7 @@ const About = () => {
           </div>
           <div className="relative z-10 px-6 py-3 bg-gradient-to-r from-[var(--primary-color)]/10 via-[var(--primary-color)]/5 to-[var(--primary-color)]/10 rounded-full backdrop-blur-sm">
             <h2 className="font-audiowide-title text-xl sm:text-2xl md:text-3xl text-[var(--primary-color)]">
-             About
+              About
             </h2>
           </div>
         </div>
@@ -38,28 +39,30 @@ const About = () => {
         {/* Main Content */}
         <div className="flex flex-col lg:flex-row items-start justify-between gap-16 px-4 py-8 pt-15">
           {/* Image Section - Left */}
-          <div className="flex-1 relative w-full">
+          <div className="flex-1 relative w-full flex flex-col items-center">
             {/* Modern Image Container */}
             <div className="relative group">
-              {/* Subtle Shadow */}
               <div className="absolute -inset-4 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-              {/* Image Container */}
-              <div className="flex-1 flex justify-center lg:justify-center order-1 lg:order-2 w-full ">
-                <div className="relative">
-                  <div className="relative w-48 h-48 sm:w-40 sm:h-40 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-[50vh] xl:h-[50vh]  overflow-hidden">
-                    <img
-                      src="/assets/images/smile.png"
-                      alt="Christian"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
+              <div className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-72 lg:h-72 xl:w-[50vh] xl:h-[50vh] overflow-hidden rounded-2xl">
+                {!imageLoaded && (
+                  <div className="absolute inset-0 bg-gray-800 animate-pulse rounded-2xl" />
+                )}
+                <img
+                  src="/assets/images/smile.png"
+                  alt="Christian RAVELOJAONA"
+                  loading="lazy"
+                  decoding="async"
+                  onLoad={() => setImageLoaded(true)}
+                  className={`w-full h-full object-cover transition-opacity duration-500 ${
+                    imageLoaded ? "opacity-100" : "opacity-0"
+                  }`}
+                />
               </div>
             </div>
 
             {/* Minimal Stats */}
-            <div className="grid grid-cols-3 gap-3 mt-8">
+            <div className="grid grid-cols-3 gap-3 mt-8 w-full">
               <div className="text-center p-4  rounded-xl border border-gray-600 shadow-sm hover:shadow-md transition-shadow duration-300">
                 <div className=" firacode-medium text-white text-2xl">
                   {projectCount}+
@@ -124,10 +127,10 @@ const About = () => {
                     reliable and scalable web applications.
                   </p>
                   <p className="text-gray-400 text-xs sm:text-[1rem]  code-comment">
-                    With hands-on experience across the entire stack  from
-                    React and Next.js on the frontend to Spring Boot and FastAPI
-                    on the backend I turn ideas into functional, performant,
-                    and maintainable products.
+                    With hands-on experience across the entire stack from React
+                    and Next.js on the frontend to Spring Boot and FastAPI on
+                    the backend I turn ideas into functional, performant, and
+                    maintainable products.
                   </p>
                   <p className="text-gray-400 text-xs sm:text-[1rem]  code-comment">
                     Every project is an opportunity to learn, grow, and deliver

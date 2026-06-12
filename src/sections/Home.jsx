@@ -7,14 +7,14 @@ const Home = () => {
     useState("");
   const [quoteDisplayed, setQuoteDisplayed] = useState("");
   const [authorDisplayed, setAuthorDisplayed] = useState("");
-  
+
   // État pour savoir si chaque animation est terminée
   const [roleComplete, setRoleComplete] = useState(false);
   const [sloganComplete, setSloganComplete] = useState(false);
   const [workingComplete, setWorkingComplete] = useState(false);
   const [quoteComplete, setQuoteComplete] = useState(false);
   const [authorComplete, setAuthorComplete] = useState(false);
-
+  const [imageLoaded, setImageLoaded] = useState(false);
   const role = "Full-Stack Developer Junior";
   const sloganText =
     "Transforming Data into Intelligence, Code into Innovation.";
@@ -25,7 +25,7 @@ const Home = () => {
   // Animation du rôle - INDÉPENDANTE
   useEffect(() => {
     let timeout;
-    
+
     if (!roleComplete && displayedRole.length < role.length) {
       timeout = setTimeout(() => {
         setDisplayedRole(role.slice(0, displayedRole.length + 1));
@@ -127,7 +127,7 @@ const Home = () => {
             <div>
               <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl mb-4 sm:mb-6 leading-tight text-center lg:text-left font-audiowide">
                 <span className="text-white">Christian RAVELOJAONA</span>
-                <br/>
+                <br />
                 <span className="text-[var(--primary-color)]">
                   {renderAnimatedRole()}
                 </span>
@@ -207,16 +207,28 @@ const Home = () => {
           </div>
 
           {/* Partie Image */}
+          {/* Partie Image */}
           <div className="flex-1 flex justify-center lg:justify-end order-1 lg:order-2 w-full lg:pt-0 sm:pt-0 pt-20">
             <div className="relative">
               <div className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 2xl:w-[28rem] 2xl:h-[28rem] border-4 lg:border-[6px] border-[var(--primary-color)] rounded-full overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-500 ease-in-out">
+                {/* Skeleton affiché pendant le chargement */}
+                {!imageLoaded && (
+                  <div className="absolute inset-0 bg-gray-800 animate-pulse rounded-full" />
+                )}
+
                 <img
                   src="/assets/images/home.png"
-                  alt="Christian"
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-700 ease-in-out"
+                  alt="Christian RAVELOJAONA - Full-Stack Developer Junior"
+                  fetchpriority="high"
+                  decoding="async"
+                  onLoad={() => setImageLoaded(true)}
+                  className={`w-full h-full object-cover hover:scale-110 transition-all duration-700 ease-in-out ${
+                    imageLoaded ? "opacity-100" : "opacity-0"
+                  }`}
                 />
               </div>
 
+              {/* Badge Open for work */}
               <div className="absolute -bottom-4 -left-4 sm:-bottom-5 sm:-left-5 md:-bottom-6 md:-left-6 lg:-bottom-7 lg:-left-7 xl:-bottom-8 xl:-left-8 bg-[var(--primary-color)]/90 text-black px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 lg:px-6 lg:py-3 rounded-lg shadow-xl backdrop-blur-sm">
                 <div className="flex items-center gap-2 sm:gap-2.5 lg:gap-3">
                   <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 lg:w-3 lg:h-3 bg-[#2bff00] rounded-full animate-pulse"></div>

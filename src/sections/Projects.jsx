@@ -11,6 +11,9 @@ const Projects = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [iframeKey, setIframeKey] = useState(0);
   const [screenActive, setScreenActive] = useState(false);
+  // ── Optimisations chargement ──
+  const [iframeReady, setIframeReady] = useState(false);
+
   const intervalRef = useRef(null);
   const projectCount = myProjects.length;
   const currentProject = myProjects[selectedProjectIndex];
@@ -25,6 +28,7 @@ const Projects = () => {
       if (isAnimating) return;
       setIsAnimating(true);
       setIsLoading(true);
+      setIframeReady(false); // reset iframe au changement de projet
       triggerScreenSwitch();
 
       setSelectedProjectIndex((prevIndex) => {
@@ -50,6 +54,7 @@ const Projects = () => {
       if (isAnimating || index === selectedProjectIndex) return;
       setIsAnimating(true);
       setIsLoading(true);
+      setIframeReady(false); // reset iframe au changement de projet
       triggerScreenSwitch();
       setSelectedProjectIndex(index);
       setIframeKey((prev) => prev + 1);
@@ -79,6 +84,7 @@ const Projects = () => {
 
   const handleMouseEnter = useCallback(() => {
     if (intervalRef.current) clearInterval(intervalRef.current);
+    setIframeReady(true); // monte l'iframe au hover
   }, []);
 
   const handleMouseLeave = useCallback(() => {
@@ -198,9 +204,17 @@ const Projects = () => {
             key={selectedProjectIndex}
             className="card-animate flex flex-col gap-6 relative p-8 rounded-2xl bg-gray-800/30 backdrop-blur-lg border border-gray-700/50 shadow-2xl"
           >
+            {/* Spotlight — lazy car hors viewport potentiellement */}
             {currentProject.spotlight && (
               <div className="absolute top-0 right-0 opacity-20 pointer-events-none">
-                <img src={currentProject.spotlight} alt="spotlight" className="w-64 h-64 object-cover" loading="lazy" />
+                <img
+                  src={currentProject.spotlight}
+                  alt=""
+                  aria-hidden="true"
+                  className="w-64 h-64 object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             )}
 
@@ -209,7 +223,13 @@ const Projects = () => {
                 className="p-3 backdrop-filter backdrop-blur-xl bg-white/10 rounded-xl shadow-lg"
                 style={currentProject.logoStyle}
               >
-                <img className="w-12 h-12" src={currentProject.logo} alt="project logo" loading="lazy" />
+                {/* Logo projet — visible immédiatement, pas de lazy */}
+                <img
+                  className="w-12 h-12"
+                  src={currentProject.logo}
+                  alt={`${currentProject.title} logo`}
+                  decoding="async"
+                />
               </div>
               <div className="flex flex-col gap-1">
                 <span className="text-[var(--primary-color)] font-audiowide text-sm bg-[var(--primary-color)]/10 px-3 py-1 rounded-full">
@@ -240,7 +260,14 @@ const Projects = () => {
                     title={tag.name}
                     style={{ animationDelay: `${index * 60}ms` }}
                   >
-                    <img src={tag.path} alt={tag.name} className="w-6 h-6" loading="lazy" />
+                    {/* Tags — lazy + async, petites icônes non critiques */}
+                    <img
+                      src={tag.path}
+                      alt={tag.name}
+                      className="w-6 h-6"
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </div>
                 ))}
               </div>
@@ -266,7 +293,13 @@ const Projects = () => {
                     rel="noreferrer"
                   >
                     <p className="firacode-light group-hover:translate-x-[-2px] transition-transform">Live</p>
-                    <img src="/assets/images/arrow-up.png" alt="arrow" className="w-3 h-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    {/* Petite icône de lien — pas de lazy, trop petite */}
+                    <img
+                      src="/assets/images/arrow-up.png"
+                      alt="arrow"
+                      className="w-3 h-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+                      decoding="async"
+                    />
                   </a>
                 )}
               </div>
@@ -279,7 +312,8 @@ const Projects = () => {
                 disabled={isAnimating}
                 aria-label="Previous project"
               >
-                <img src="/assets/images/left-arrow.png" alt="left arrow" className="w-4 h-4" />
+                {/* Flèches — visibles immédiatement, pas de lazy */}
+                <img src="/assets/images/left-arrow.png" alt="left arrow" className="w-4 h-4" decoding="async" />
               </button>
 
               <div className="flex gap-2">
@@ -304,41 +338,41 @@ const Projects = () => {
                 disabled={isAnimating}
                 aria-label="Next project"
               >
-                <img src="/assets/images/right-arrow.png" alt="right arrow" className="w-4 h-4" />
+                <img src="/assets/images/right-arrow.png" alt="right arrow" className="w-4 h-4" decoding="async" />
               </button>
             </div>
           </div>
 
-          {/* ── PC DESIGN AVEC BACKGROUND DARK MODE ── */}
+          {/* ── PC Monitor ── */}
           <div
             className="relative flex items-center justify-center"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
             <div className="relative w-full max-w-2xl">
-              
+
               {/* Support d'écran */}
               <div className="absolute -bottom-20 left-1/2 transform -translate-x-1/2 w-32 h-24 bg-gradient-to-b from-gray-700 to-gray-800 rounded-b-lg z-0">
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-4 bg-gray-600 rounded-full"></div>
               </div>
 
-              {/* Boîtier complet de l'écran */}
+              {/* Boîtier écran */}
               <div className="relative rounded-2xl shadow-2xl border-2 border-gray-600 bg-gray-800 p-2 z-10">
-                
+
                 {/* Coque arrière */}
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 rounded-2xl -z-10 transform translate-x-1 translate-y-1"></div>
-                
-                {/* Ventilation arrière */}
+
+                {/* Ventilation */}
                 <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 flex gap-1">
                   {[...Array(8)].map((_, i) => (
                     <div key={i} className="w-2 h-8 bg-gray-700 rounded-sm"></div>
                   ))}
                 </div>
 
-                {/* Cadre de l'écran (bezel) */}
+                {/* Cadre (bezel) */}
                 <div className="bg-black rounded-xl p-3 border border-gray-700">
-                  
-                  {/* Bandeau webcam + capteurs */}
+
+                  {/* Webcam */}
                   <div className="relative flex justify-center items-center gap-2 mb-2 pb-1 border-b border-gray-800">
                     <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
                     <div className="w-1 h-1 bg-green-400 rounded-full breathe"></div>
@@ -348,21 +382,21 @@ const Projects = () => {
                     <div className="text-[8px] text-gray-600 absolute right-0">1080p</div>
                   </div>
 
-                  {/* Écran avec background DARK MODE (gris foncé comme navigateur) */}
+                  {/* Écran */}
                   <div className={`relative bg-[#1e1e1e] rounded-lg overflow-hidden min-h-[450px] ${isPCOn ? 'pc-glow' : ''}`}>
-                    
-                    {/* Reflet d'écran */}
+
+                    {/* Reflet */}
                     <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-black/20 pointer-events-none z-20 rounded-lg"></div>
-                    
+
                     {/* Scanlines */}
                     <div className="absolute inset-0 pc-screen-bg pointer-events-none z-30 opacity-20"></div>
-                    
-                    {/* Luminosité d'écran */}
+
+                    {/* Luminosité */}
                     {isPCOn && (
                       <div className="absolute inset-0 bg-gradient-to-t from-white/5 to-transparent pointer-events-none z-10"></div>
                     )}
 
-                    {/* Effet de transition d'écran */}
+                    {/* Transition d'écran */}
                     {screenActive && (
                       <div className="absolute inset-0 z-40 pointer-events-none">
                         <div className="w-full h-1 bg-[var(--primary-color)]/80 screen-sweep"></div>
@@ -370,10 +404,10 @@ const Projects = () => {
                       </div>
                     )}
 
-                    {/* LED d'alimentation */}
+                    {/* LED alimentation */}
                     <div className={`absolute bottom-2 right-2 w-1.5 h-1.5 rounded-full z-10 ${isPCOn ? 'bg-green-500 animate-pulse shadow-lg shadow-green-500/50' : 'bg-red-500'}`}></div>
 
-                    {/* Loading - style dark mode */}
+                    {/* Loading */}
                     {isLoading && isPCOn && (
                       <div className="absolute inset-0 flex items-center justify-center bg-[#1e1e1e]/95 z-50 backdrop-blur-sm">
                         <div className="flex flex-col items-center gap-4">
@@ -391,38 +425,62 @@ const Projects = () => {
                       </div>
                     )}
 
-                    {/* Contenu de l'écran - Background DARK */}
+                    {/* Contenu de l'écran */}
                     {isPCOn ? (
                       isLive ? (
-                        <iframe
-                          key={iframeKey}
-                          src={currentProject.liveDemo}
-                          className="w-full h-[450px] border-0"
-                          title={`${currentProject.title} Live Demo`}
-                          sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
-                          loading="lazy"
-                          onLoad={() => setIsLoading(false)}
-                        />
+                        iframeReady ? (
+                          // ── Iframe montée uniquement après hover ──
+                          <iframe
+                            key={iframeKey}
+                            src={currentProject.liveDemo}
+                            className="w-full h-[450px] border-0"
+                            title={`${currentProject.title} Live Demo`}
+                            sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
+                            loading="lazy"
+                            onLoad={() => setIsLoading(false)}
+                          />
+                        ) : (
+                          // ── Placeholder avant hover ──
+                          <div className="w-full h-[450px] flex flex-col items-center justify-center bg-[#1e1e1e] gap-4">
+                            <div className="w-16 h-16 bg-gray-800 rounded-2xl flex items-center justify-center border border-gray-700">
+                              <img
+                                src={currentProject.logo}
+                                alt={currentProject.title}
+                                className="w-8 h-8"
+                                loading="lazy"
+                                decoding="async"
+                              />
+                            </div>
+                            <p className="text-gray-500 font-mono text-xs tracking-wider">
+                              Hover to load preview
+                            </p>
+                            <div className="w-2 h-2 bg-[var(--primary-color)] rounded-full mx-auto breathe"></div>
+                          </div>
+                        )
                       ) : (
+                        // ── Source only ──
                         <div className="w-full h-[450px] relative overflow-hidden bg-[#1e1e1e] flex items-center justify-center">
-                          {/* Motif de fond style navigateur dark */}
                           <div className="absolute inset-0 opacity-10">
                             <div className="absolute top-0 left-0 w-32 h-32 bg-blue-500 rounded-full blur-3xl"></div>
                             <div className="absolute bottom-0 right-0 w-48 h-48 bg-purple-500 rounded-full blur-3xl"></div>
                             <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full blur-3xl"></div>
                           </div>
-                          
-                          {/* Motif de grille style VS Code */}
+
                           <div className="absolute inset-0 opacity-5" style={{
                             backgroundImage: 'radial-gradient(circle at 1px 1px, #fff 1px, transparent 1px)',
                             backgroundSize: '24px 24px'
                           }}></div>
-                          
-                          {/* Contenu adapté au thème dark */}
+
                           <div className="text-center z-10 p-6">
                             <div className="w-24 h-24 mx-auto mb-4 bg-gray-800 rounded-2xl flex items-center justify-center border border-gray-700 shadow-lg">
                               {currentProject.logo ? (
-                                <img src={currentProject.logo} alt="logo" className="w-12 h-12" />
+                                <img
+                                  src={currentProject.logo}
+                                  alt="logo"
+                                  className="w-12 h-12"
+                                  loading="lazy"
+                                  decoding="async"
+                                />
                               ) : (
                                 <svg className="w-12 h-12 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -446,7 +504,7 @@ const Projects = () => {
                         </div>
                       )
                     ) : (
-                      /* Écran éteint */
+                      // ── Écran éteint ──
                       <div className="w-full h-[450px] bg-black flex items-center justify-center">
                         <div className="text-center">
                           <div className="relative w-20 h-20 mx-auto mb-4">
@@ -468,17 +526,17 @@ const Projects = () => {
                       </div>
                     )}
 
-                    {/* Bandeau inférieur de l'écran */}
+                    {/* Bandeau inférieur */}
                     <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-black/30 to-transparent pointer-events-none z-20"></div>
                   </div>
 
-                  {/* Logo de la marque */}
+                  {/* Marque */}
                   <div className="flex justify-center mt-2">
                     <span className="text-[8px] text-gray-500 font-mono tracking-[0.15em]">DEVELOPER EDITION</span>
                   </div>
                 </div>
 
-                {/* Barre de contrôle sous l'écran */}
+                {/* Barre de contrôle */}
                 <div className="flex justify-between items-center mt-2 px-4">
                   <div className="flex gap-3">
                     <button
@@ -513,7 +571,7 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {/* Boutons de réglage écran */}
+                {/* Boutons réglage */}
                 <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex flex-col gap-1">
                   <div className="w-4 h-4 bg-gray-700 rounded-sm hover:bg-gray-600 cursor-pointer transition-colors"></div>
                   <div className="w-4 h-4 bg-gray-700 rounded-sm hover:bg-gray-600 cursor-pointer transition-colors"></div>
@@ -521,7 +579,7 @@ const Projects = () => {
                 </div>
               </div>
 
-              {/* Clavier design */}
+              {/* Clavier décoratif */}
               <div className="absolute -bottom-32 left-1/2 transform -translate-x-1/2 w-[90%] opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:translate-y-0 translate-y-10 z-20">
                 <div className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-xl p-3 shadow-2xl border border-gray-700">
                   <div className="grid grid-cols-14 gap-1 mb-2">
