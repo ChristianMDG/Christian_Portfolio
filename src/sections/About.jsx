@@ -30,7 +30,7 @@ const About = () => {
           </div>
           <div className="relative z-10 px-6 py-3 bg-gradient-to-r from-[var(--primary-color)]/10 via-[var(--primary-color)]/5 to-[var(--primary-color)]/10 rounded-full backdrop-blur-sm">
             <h2 className="font-audiowide-title text-xl sm:text-2xl md:text-3xl text-[var(--primary-color)]">
-             About
+              About
             </h2>
           </div>
         </div>
@@ -45,13 +45,21 @@ const About = () => {
               <div className="absolute -inset-4 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               {/* Image Container */}
-              <div className="flex-1 flex justify-center lg:justify-center order-1 lg:order-2 w-full ">
-                <div className="relative">
-                  <div className="relative w-48 h-48 sm:w-40 sm:h-40 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-[50vh] xl:h-[50vh]  overflow-hidden">
+              <div className="flex-1 flex justify-center lg:justify-center order-1 lg:order-2 w-full">
+                <div className="relative group">
+                  <div className="relative w-48 h-48 sm:w-40 sm:h-40 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-[50vh] xl:h-[50vh] overflow-hidden">
+                    {/* Image par défaut */}
                     <img
                       src="/assets/images/about.png"
                       alt="Christian"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0 absolute inset-0"
+                    />
+
+                    {/* Image au survol */}
+                    <img
+                      src="/assets/images/smile.png"
+                      alt="Christian"
+                      className="w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100"
                     />
                   </div>
                 </div>
@@ -124,10 +132,10 @@ const About = () => {
                     reliable and scalable web applications.
                   </p>
                   <p className="text-gray-400 text-xs sm:text-[1rem]  code-comment">
-                    With hands-on experience across the entire stack  from
-                    React and Next.js on the frontend to Spring Boot and FastAPI
-                    on the backend I turn ideas into functional, performant,
-                    and maintainable products.
+                    With hands-on experience across the entire stack from React
+                    and Next.js on the frontend to Spring Boot and FastAPI on
+                    the backend I turn ideas into functional, performant, and
+                    maintainable products.
                   </p>
                   <p className="text-gray-400 text-xs sm:text-[1rem]  code-comment">
                     Every project is an opportunity to learn, grow, and deliver

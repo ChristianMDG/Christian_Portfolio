@@ -58,12 +58,6 @@ function TechStack() {
 
   return (
     <div className="container mx-auto min-h-screen relative">
-      {/* Ambient grid + glow backdrop */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--primary-color)]/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
-      </div>
-
       <div className="px-4 py-8 sm:px-6 md:px-8 lg:px-12 xl:px-20 w-full relative z-10">
 
         {/* Header */}

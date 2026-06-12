@@ -69,27 +69,6 @@ export const myProjects = [
     ],
   },
   {
-    title: 'Pokedex',
-    desc: 'An interactive Pokedex app to explore all Pokémon with search, filtering by type, and detailed stats for each Pokémon using the public PokéAPI.',
-    subdesc:
-      'Built with React, Vite and TailwindCSS. Consumes real-time data from the PokéAPI REST endpoint. Clean UI with responsive grid layout. Deployed on Vercel.',
-    href: 'https://github.com/ChristianMDG/Pokedex',
-    liveDemo: 'https://pokedex-tta8.vercel.app/',
-    placeholder: 'https://images.unsplash.com/photo-1542779867-df548aa44fa3?w=800&q=80',
-    logo: '/assets/images/project-logo4.png',
-    logoStyle: {
-      backgroundColor: '#1a1a2e',
-      border: '0.2px solid #e63946',
-      boxShadow: '0px 0px 60px 0px #e639464D',
-    },
-    spotlight: '/assets/images/spotlight4.png',
-    tags: [
-      { id: 1, name: 'React.js', path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
-      { id: 2, name: 'TailwindCSS', path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
-      { id: 3, name: 'Vite', path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg' },
-    ],
-  },
-  {
     title: 'PERN Auth',
     desc: 'A secure authentication system demonstrating JWT concepts, HTTP-only cookies, and session management. A practical deep-dive into fullstack security patterns.',
     subdesc:
