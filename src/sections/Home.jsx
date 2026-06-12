@@ -211,7 +211,7 @@ const Home = () => {
             <div className="relative">
               <div className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 2xl:w-[28rem] 2xl:h-[28rem] border-4 lg:border-[6px] border-[var(--primary-color)] rounded-full overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-500 ease-in-out">
                 <img
-                  src="/assets/images/christian.png"
+                  src="/assets/images/home.png"
                   alt="Christian"
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-700 ease-in-out"
                 />
